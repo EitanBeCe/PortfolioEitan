@@ -1,7 +1,8 @@
 WHEN FINISHED CHECK: // FIXME: when deployed
 
-Typescript
 React.js
+Aceternity UI. Spotlight
+Typescript
 Next.js
 TailwindCSS
 
