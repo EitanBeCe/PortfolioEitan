@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "../components/theme-provider.tsx";
+import { ThemeProvider } from "../components/ThemeProvider.tsx";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -9,7 +9,9 @@ export const metadata: Metadata = {
   title: "Eitan's Portfolio",
   description: "Modern & Minimalist web developer portfolio.",
   keywords: "web development, frontend, React, Next.js, Tailwind, portfolio",
-  authors: [{ name: "Eitan", url: "https://www.linkedin.com/in/eitan-elberg/" }], // FIXME: when deployed
+  authors: [
+    { name: "Eitan", url: "https://www.linkedin.com/in/eitan-elberg/" },
+  ], // FIXME: when deployed
   openGraph: {
     title: "Eitan's Portfolio",
     description: "Modern & Minimalist web developer portfolio.",
