@@ -1,18 +1,13 @@
 WHEN FINISHED CHECK: // FIXME: when deployed
 
 React.js
-Aceternity UI. Spotlight
+Aceternity UI. Spotlight, GridBackground, TextGenerateEffect
 Typescript
 Next.js
 TailwindCSS
-
-
-
-
-
+ThemeProvider
 
 ---
-
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
