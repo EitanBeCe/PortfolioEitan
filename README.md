@@ -6,6 +6,7 @@ Typescript
 Next.js
 TailwindCSS
 ThemeProvider
+React Icons
 
 ---
 
