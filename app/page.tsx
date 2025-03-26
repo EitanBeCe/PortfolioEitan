@@ -12,8 +12,9 @@ export default function Home() {
   // https://ui.aceternity.com/components/google-gemini-effect эффект между блоками
   // https://ui.aceternity.com/components/background-gradient-animation градиент под фотку как на прошлом портфолио токо круче
 
+  // FIXME
   // https://ui.aceternity.com/components/wavy-background Вариант для хиро
-  !
+  // https://ui.aceternity.com/components/spotlight-new Спотлайт 2
 
   return (
     <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">

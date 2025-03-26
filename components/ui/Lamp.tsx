@@ -2,12 +2,11 @@
 import React from "react";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
-import { col, div } from "framer-motion/client";
 
 export function LampDemo() {
   return (
-    <LampContainer className="absolute min-h-[46vh]">
-      <motion.h1
+    <LampContainer className="absolute left-1/2 -translate-x-1/2 top-64 -translate-y-1/2 max-sm:top-52">
+      {/* <motion.h1
         initial={{ opacity: 0.5, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
@@ -17,8 +16,8 @@ export function LampDemo() {
         }}
         className="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
       >
-        {/* Build lamps <br /> the right way */}
-      </motion.h1>
+        Build lamps <br /> the right way
+      </motion.h1> */}
     </LampContainer>
   );
 }
@@ -27,7 +26,7 @@ export const LampContainer = ({
   children,
   className,
 }: {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   className?: string;
 }) => {
   return (
@@ -38,7 +37,7 @@ export const LampContainer = ({
         className
       )}
     >
-      <div className="relative flex  flex-1 scale-y-125 items-center justify-center isolate z-0 ">
+      <div className="relative flex  flex-1 scale-y-125 items-center justify-center isolate z-0 max-sm:scale-50">
         <motion.div
           initial={{ opacity: 0.5, width: "15rem" }}
           whileInView={{ opacity: 1, width: "30rem" }}
@@ -99,9 +98,11 @@ export const LampContainer = ({
       </div>
 
       {/* px-5 */}
-      <div className="relative z-50 flex -translate-y-80 flex-col items-center">
-        {children}
-      </div>
+      {children && (
+        <div className="relative z-50 flex -translate-y-80 flex-col items-center">
+          {children}
+        </div>
+      )}
     </div>
   );
 };

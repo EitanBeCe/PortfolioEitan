@@ -6,7 +6,7 @@ import { LampDemo } from "./ui/Lamp.tsx";
 const Hero_v2 = () => {
   // FIXME: тут только с прошлого портфолио, надо добавить новые проекты. И добавить ссыль на гитхаб.
   return (
-    <div className="pb-20">
+    <div className="relative pb-20">
       <LampDemo />
 
       <HeroParallax products={products} />
