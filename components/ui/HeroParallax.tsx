@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   motion,
   useScroll,
@@ -14,24 +14,43 @@ import MagicButton from "./MagicButton.tsx";
 import { TextGenerateEffect } from "./TextGenerateEffect.tsx";
 
 export const HeroParallax = ({
-  products,
+  myProjects,
 }: {
-  products: {
+  myProjects: {
     title: string;
     link: string;
     thumbnail: string;
   }[];
 }) => {
-  const firstRow = products.slice(0, 5);
-  const secondRow = products.slice(5, 10);
-  const thirdRow = products.slice(10, 15);
+  const firstRow = myProjects.slice(0, 5);
+  const secondRow = myProjects.slice(5, 10);
+  const thirdRow = myProjects.slice(10, 15);
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
   });
 
-  const springConfig = { stiffness: 300, damping: 30, bounce: 100 };
+  // Edited
+  const laptopRange = [-700, 400],
+    mobileRange = [-700, -100];
+
+  const [range, setRange] = useState(laptopRange);
+  // Edited
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const updateRange = () => {
+        setRange(window.innerWidth > 768 ? laptopRange : mobileRange);
+      };
+
+      updateRange();
+      window.addEventListener("resize", updateRange);
+      return () => window.removeEventListener("resize", updateRange);
+    }
+  }, []);
+
+  // const springConfig = { stiffness: 300, damping: 30, bounce: 100 };
+  const springConfig = { stiffness: 200, damping: 30, bounce: 100 };
 
   const translateX = useSpring(
     useTransform(scrollYProgress, [0, 1], [0, 1000]),
@@ -53,10 +72,18 @@ export const HeroParallax = ({
     useTransform(scrollYProgress, [0, 0.2], [20, 0]),
     springConfig
   );
-  const translateY = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [-700, 500]),
-    springConfig
-  );
+
+  // Edited
+  const translateY = useSpring(useTransform(scrollYProgress, [0, 0.2], range));
+  // const translateY = useSpring(
+  //   useTransform(
+  //     scrollYProgress,
+  //     [0, 0.2],
+  //     window.innerWidth > 768 ? [-700, 500] : [-100, 100]
+  //   ),
+  //   springConfig
+  // );
+
   return (
     <div
       ref={ref}
@@ -70,9 +97,10 @@ export const HeroParallax = ({
           translateY,
           opacity,
         }}
-        className=""
+        className="max-sm:mt-32"
+        // Edited motion.divs space and mb
       >
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
+        <motion.div className="flex flex-row-reverse space-x-reverse space-x-[5vw] mb-[5vw]">
           {firstRow.map((product) => (
             <ProductCard
               product={product}
@@ -81,7 +109,7 @@ export const HeroParallax = ({
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row  mb-20 space-x-20 ">
+        <motion.div className="flex flex-row space-x-[5vw] mb-[5vw]">
           {secondRow.map((product) => (
             <ProductCard
               product={product}
@@ -90,7 +118,7 @@ export const HeroParallax = ({
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-20">
+        <motion.div className="flex flex-row-reverse space-x-reverse space-x-[5vw]">
           {thirdRow.map((product) => (
             <ProductCard
               product={product}
@@ -164,11 +192,14 @@ export const ProductCard = ({
         y: -20,
       }}
       key={product.title}
-      className="group/product h-96 w-[30rem] relative shrink-0"
+      // Edited
+      className="group/product h-[40vw] w-[40vw] sm:h-96 sm:w-[30rem] relative shrink-0"
     >
       <Link
         href={product.link}
-        className="block group-hover/product:shadow-2xl "
+        className="block group-hover/product:shadow-2xl"
+        target="_blank"
+        rel="noopener noreferrer"
       >
         <Image
           src={product.thumbnail}

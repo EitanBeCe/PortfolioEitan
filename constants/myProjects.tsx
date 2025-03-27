@@ -1,4 +1,4 @@
-export const products = [
+export const myProjects = [
   {
     title: "Marvel - Marvel API",
     link: "https://wonderful-bunny-bb3b3e.netlify.app/",

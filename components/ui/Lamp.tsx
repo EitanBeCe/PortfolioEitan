@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 
-export function LampDemo() {
+export function Lamp() {
   return (
     <LampContainer className="absolute left-1/2 -translate-x-1/2 top-64 -translate-y-1/2 max-sm:top-52">
       {/* <motion.h1

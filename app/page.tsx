@@ -1,6 +1,7 @@
 import React from "react";
 import Hero from "../components/Hero.tsx";
 import Hero_v2 from "../components/Hero_v2.tsx";
+import { Lamp } from "../components/ui/Lamp.tsx";
 
 export default function Home() {
   // https://ui.aceternity.com/components/timeline Можно для отображения моего опыта
@@ -21,6 +22,7 @@ export default function Home() {
       <div className="max-w-7xl w-full">
         {/* <Hero /> */}
         <Hero_v2 />
+        In case you didn't catch the projects - here you go again more detailed
       </div>
     </main>
   );
