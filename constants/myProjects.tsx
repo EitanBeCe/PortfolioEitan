@@ -15,7 +15,7 @@ export const myProjects = [
     thumbnail: "/assets/projectThumbnails/expenses.png",
   },
   {
-    title: "Employees list - Redux and React classes",
+    title: "Employees list - Redux and React",
     link: "https://vocal-dragon-aa24cc.netlify.app/",
     thumbnail: "/assets/projectThumbnails/employee.png",
   },
@@ -25,7 +25,7 @@ export const myProjects = [
     thumbnail: "/assets/projectThumbnails/employee.png",
   },
   {
-    title: "Employees list - Redux and React classes",
+    title: "Employees list - Redux and React class components",
     link: "https://vocal-dragon-aa24cc.netlify.app/",
     thumbnail: "/assets/projectThumbnails/employee.png",
   },

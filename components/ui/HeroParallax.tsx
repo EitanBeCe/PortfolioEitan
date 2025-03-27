@@ -12,6 +12,7 @@ import Link from "next/link";
 import { FaLocationArrow } from "react-icons/fa6";
 import MagicButton from "./MagicButton.tsx";
 import { TextGenerateEffect } from "./TextGenerateEffect.tsx";
+import { HeroTexts } from "../HeroTexts.tsx";
 
 export const HeroParallax = ({
   myProjects,
@@ -89,7 +90,7 @@ export const HeroParallax = ({
       ref={ref}
       className="h-[300vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
-      <Header />
+      <HeroTexts />
       <motion.div
         style={{
           rotateX,
@@ -97,7 +98,7 @@ export const HeroParallax = ({
           translateY,
           opacity,
         }}
-        className="max-sm:mt-32"
+        className="max-md:mt-32"
         // Edited motion.divs space and mb
       >
         <motion.div className="flex flex-row-reverse space-x-reverse space-x-[5vw] mb-[5vw]">
@@ -128,46 +129,6 @@ export const HeroParallax = ({
           ))}
         </motion.div>
       </motion.div>
-    </div>
-  );
-};
-
-export const Header = () => {
-  return (
-    // <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
-    //   <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
-    //     The Ultimate <br /> development studio
-    //   </h1>
-    //   <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
-    //     We build beautiful products with the latest technologies and frameworks.
-    //     We are a team of passionate developers and designers that love to build
-    //     amazing products.
-    //   </p>
-    // </div>
-
-    <div className="flex justify-center relative my-20 z-10">
-      <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-        <h2 className="uppercase tracking-widest text-xs text-center text-blue-100">
-          Dynamic Web Magic with Next.js
-        </h2>
-
-        <TextGenerateEffect
-          className="text-center text-[40px] md:text-5xl lg:text-6xl"
-          words="Transforming Concepts into Seamless User Experiences"
-        />
-
-        <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-          Hi, I&apos;m Eitan, a React developer based in Israel
-        </p>
-
-        <a href="#about">
-          <MagicButton
-            title="Show my work"
-            icon={<FaLocationArrow />}
-            iconPosition="right"
-          />
-        </a>
-      </div>
     </div>
   );
 };
