@@ -1,7 +1,7 @@
 import React from "react";
 import Hero from "../components/Hero.tsx";
 import Hero_v2 from "../components/Hero_v2.tsx";
-import AnimatedLines from "../components/ui/GoogleGeminyEffect.tsx";
+import { GoogleGeminiEffectDemo } from "../components/ui/GoogleGeminyEffect.tsx";
 
 export default function Home() {
   // FIXME use it
@@ -24,7 +24,8 @@ export default function Home() {
       <div className="max-w-7xl w-full">
         {/* <Hero /> */}
         <Hero_v2 />
-        <AnimatedLines />
+        {/* <AnimatedLines /> */}
+        <GoogleGeminiEffectDemo />
       </div>
     </main>
   );
