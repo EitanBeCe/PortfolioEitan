@@ -11,7 +11,7 @@ import {
   useTransform,
 } from "motion/react";
 // import path from "path";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 // import style from "styled-jsx/style";
 
 // const AnimatedLines = () => {
@@ -60,7 +60,7 @@ export function GoogleGeminiEffectDemo() {
 
   return (
     <div
-      className="h-[400vh] bg-black w-full dark:border dark:border-white/[0.1] rounded-md relative pt-40 overflow-clip"
+      className="relative h-[400vh] bg-black w-full dark:border dark:border-white/[0.1] rounded-md pt-40 overflow-clip"
       ref={ref}
     >
       <GoogleGeminiEffect
@@ -93,31 +93,30 @@ const GoogleGeminiEffect = ({
   className?: string;
 }) => {
   return (
-    <div className={cn("sticky top-80", className)}>
+    <div className={cn("sticky top-1/2 -translate-y-1/4", className)}>
       {/* <div className={cn("relative top-80", className)}> */}
       <p className="text-lg md:text-7xl font-normal pb-4 text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-300">
-        {title || `Build with Aceternity UI`}
+        {title || `In case you missed it`}
       </p>
       <p className="text-xs md:text-xl font-normal text-center text-neutral-400 mt-4 max-w-lg mx-auto">
-        {description ||
-          `Scroll this component and see the bottom SVG come to life wow this
-        works!`}
+        {description || `Smoothly scroll down`}
       </p>
-      {/* <div className="w-full h-[890px] -top-60 md:-top-40  flex items-center justify-center bg-red-transparent absolute "> */}
-      {/* <div className="w-full h-[890px] items-center justify-center bg-red-transparent fixed top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2"> */}
-      {/* <button className="font-bold bg-white rounded-full md:px-4 md:py-2 px-2 py-1 md:mt-24 mt-8 z-30 md:text-base text-black text-xs  w-fit mx-auto "> */}
-      <button className="fixed top-1/2 translate-y-9 left-1/2 -translate-x-1/2 font-bold bg-white rounded-full md:px-4 md:py-2 px-2 py-1 z-10 md:text-base text-black text-xs w-fit mx-auto overflow-hidden">
-        Text Text Text
-        {/* In case you didn&apos;t catch the projects here you go again in more detailes */}
-      </button>
-      {/* </div> */}
+      <div className="w-full h-[890px] -top-60 md:-top-40  flex items-center justify-center bg-red-transparent absolute ">
+        {/* <div className="w-full h-[890px] items-center justify-center bg-red-transparent fixed top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2"> */}
+        <button className="font-bold bg-white rounded-full md:px-4 md:py-2 px-2 py-1 md:mt-24 mt-8 z-30 md:text-base text-black text-xs  w-fit mx-auto ">
+          {/* <button className="sticky top-1/2 translate-y-9 left-1/2 -translate-x-1/2 font-bold bg-white rounded-full md:px-4 md:py-2 px-2 py-1 z-10 md:text-base text-black text-xs w-fit mx-auto overflow-hidden"> */}
+          And take a closer look
+          {/* In case you didn&apos;t catch the projects here you go again in more detailes */}
+        </button>
+      </div>
       <svg
         width="1440"
         height="890"
         viewBox="0 0 1440 890"
         xmlns="http://www.w3.org/2000/svg"
-        // className=" absolute -top-60  md:-top-40 w-full"
-        className="fixed top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-full"
+        className="absolute -top-60  md:-top-40 w-full"
+        // className="relative w-full"
+        // className="fixed top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-full"
         // className="sticky top-100  w-full"
       >
         <motion.path
