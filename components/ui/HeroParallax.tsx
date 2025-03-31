@@ -9,9 +9,9 @@ import {
 } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaLocationArrow } from "react-icons/fa6";
-import MagicButton from "./MagicButton.tsx";
-import { TextGenerateEffect } from "./TextGenerateEffect.tsx";
+// import { FaLocationArrow } from "react-icons/fa6";
+// import MagicButton from "./MagicButton.tsx";
+// import { TextGenerateEffect } from "./TextGenerateEffect.tsx";
 import { HeroTexts } from "../HeroTexts.tsx";
 
 export const HeroParallax = ({
@@ -34,10 +34,10 @@ export const HeroParallax = ({
 
   // Edited
   const laptopRange = [-700, 400],
-    mobileRange = [-700, -100];
+    mobileRange = [-700, 0];
 
-  const [range, setRange] = useState(laptopRange);
   // Edited
+  const [range, setRange] = useState(laptopRange);
   useEffect(() => {
     if (typeof window !== "undefined") {
       const updateRange = () => {
@@ -88,7 +88,7 @@ export const HeroParallax = ({
   return (
     <div
       ref={ref}
-      className="h-[300vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="h-[200vh] md:h-[300vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:400px] md:[perspective:800px] [transform-style:preserve-3d]"
     >
       <HeroTexts />
       <motion.div
