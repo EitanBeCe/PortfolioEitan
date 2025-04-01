@@ -4,6 +4,8 @@ import { cn } from "@/lib/utils";
 import { motion, MotionValue, useScroll, useTransform } from "motion/react";
 // import path from "path";
 import React from "react";
+import { TextRevealCard } from "./TextRevealCard.tsx";
+import { div } from "framer-motion/client";
 // import style from "styled-jsx/style";
 
 export function AnimatedLines() {
@@ -56,7 +58,7 @@ const GoogleGeminiEffect = ({
   className?: string;
 }) => {
   return (
-    <div className={cn("sticky top-1/4", className)}>
+    <div className={cn("sticky top-[20%]", className)}>
       <p className="text-4xl md:text-6xl font-normal pb-4 text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-300">
         {title || `Just scroll it`}
       </p>
@@ -73,7 +75,7 @@ const GoogleGeminiEffect = ({
         height="890"
         viewBox="0 0 1440 890"
         xmlns="http://www.w3.org/2000/svg"
-        className="absolute -top-60  md:-top-40 w-full"
+        className="absolute -top-60  md:-top-40  w-full"
         // className="relative w-full"
         // className="fixed top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-full"
         // className="sticky top-100  w-full"
@@ -193,6 +195,14 @@ const GoogleGeminiEffect = ({
           </filter>
         </defs>
       </svg>
+
+      <TextRevealCard
+        text="To what you've missed"
+        revealText="Projects that worth it"
+        // className="absolute top-96 left-1/2 -translate-x-1/3 w-[36rem]"
+        // className="left-[34vw] w-[50vw] top-[40vh]"
+        className="mx-auto translate-x-[8vw] sm:translate-x-[8vw] w-[60vw] sm:w-[50vw] top-[20vh] sm:top-[40vh]"
+      />
     </div>
   );
 };

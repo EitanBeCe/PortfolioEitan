@@ -18,7 +18,8 @@
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.5.0",
-    "tailwind-merge": "^3.0.2",
+    "svelte-motion": "^0.12.2",
+    "tailwind-merge": "^3.1.0",
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
