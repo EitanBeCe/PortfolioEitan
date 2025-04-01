@@ -5,7 +5,7 @@ import { motion, MotionValue, useScroll, useTransform } from "motion/react";
 // import path from "path";
 import React from "react";
 import { TextRevealCard } from "./TextRevealCard.tsx";
-import { div } from "framer-motion/client";
+// import { div } from "framer-motion/client";
 // import style from "styled-jsx/style";
 
 export function AnimatedLines() {
@@ -58,7 +58,10 @@ const GoogleGeminiEffect = ({
   className?: string;
 }) => {
   return (
-    <div className={cn("sticky top-[20%]", className)}>
+    // <div className={cn("sticky top-80", className)}>
+    <div
+      className={cn("sticky top-[30%] sm:top-[20%] md:top-[14%]", className)}
+    >
       <p className="text-4xl md:text-6xl font-normal pb-4 text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-300">
         {title || `Just scroll it`}
       </p>

@@ -9,9 +9,6 @@ import {
 } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
-// import { FaLocationArrow } from "react-icons/fa6";
-// import MagicButton from "./MagicButton.tsx";
-// import { TextGenerateEffect } from "./TextGenerateEffect.tsx";
 import { HeroTexts } from "../HeroTexts.tsx";
 
 export const HeroParallax = ({
