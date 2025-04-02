@@ -1,15 +1,14 @@
-import React from "react";
-import { BentoGrid, BentoGridItem } from "./ui/BentoGrid.tsx";
-import { gridItems, myProjects } from "../constants/index.tsx";
+import { gridItems } from "@/data";
+import { BentoGrid, BentoGridItem } from "./ui/BentoGrid";
 
 const Grid = () => {
   return (
-    <section id="about" className="mx-6 pt-8">
-      <BentoGrid>
-        {/* {myProjects.map((item) => ( */}
+    <section id="about">
+      <BentoGrid className="w-full py-20">
         {gridItems.map((item, i) => (
           <BentoGridItem
-            key={item.id}
+            id={item.id}
+            key={i}
             title={item.title}
             description={item.description}
             className={item.className}

@@ -4,7 +4,7 @@ import Hero_v2 from "../components/Hero_v2.tsx";
 import { AnimatedLines } from "../components/ui/GoogleGeminyEffect.tsx";
 import { FloatingNav } from "../components/ui/FloatingNavbar.tsx";
 import Grid from "../components/Grid.tsx";
-import { navItems } from "../constants/index.tsx";
+import { navItems } from "../data/index.tsx";
 
 export default function Home() {
   // FIXME use it
