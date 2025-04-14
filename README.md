@@ -1,7 +1,7 @@
 WHEN FINISHED CHECK: // FIXME: when deployed
 
 React.js
-Aceternity UI. Spotlight, GridBackground, TextGenerateEffect, GoogleGeminiEffect, Lamp effect, TextRevealCard, FloatingNavbar, Bento grid, BackgroundGradientAnimation
+Aceternity UI. Spotlight, GridBackground, TextGenerateEffect, GoogleGeminiEffect, Lamp effect, TextRevealCard, FloatingNavbar, Bento grid, BackgroundGradientAnimation, Globe
 Typescript
 Next.js
 TailwindCSS
