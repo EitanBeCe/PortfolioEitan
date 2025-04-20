@@ -1,6 +1,13 @@
+"use client";
+
 import { cn } from "@/lib/utils";
 import { BackgroundGradientAnimation } from "./GradientBackground.tsx";
 import { GlobeDemo } from "./GridGlobe.tsx";
+import { IoCopyOutline } from "react-icons/io5";
+import MagicButton from "./MagicButton.tsx";
+import Lottie from "react-lottie";
+import { useState } from "react";
+import animationData from "@/data/confetti.json";
 
 export const BentoGrid = ({
   className,
@@ -45,6 +52,26 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
+  const leftLists = ["React.js", "Next.js", "TypeScript"];
+  const rightLists = ["SwiftUI", "Redux", "Three.js"];
+
+  const [copied, setCopied] = useState(false);
+
+  const defaultOptions = {
+    loop: copied,
+    autoplay: copied,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+
+  const handleCopy = () => {
+    const text = "eitanleviberger@gmail.com";
+    navigator.clipboard.writeText(text);
+    setCopied(true);
+  };
+
   return (
     <div
       className={cn(
@@ -60,7 +87,7 @@ export const BentoGridItem = ({
     >
       {/* {header} */}
 
-      <div className={`${id === 6 && "flex justify-center h-full"}`}>
+      <div className={`${id === 6 && "flex justify-center"} h-full`}>
         <div className="w-full h-full absolute">
           {img && (
             <img
@@ -110,7 +137,7 @@ export const BentoGridItem = ({
           {id === 3 && (
             <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
               <div className="flex flex-col gap-3 lg:gap-8">
-                {["React.js", "Next.js", "TypeScript"].map((item) => (
+                {leftLists.map((item) => (
                   <span
                     key={item}
                     className="py-2 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]"
@@ -125,7 +152,7 @@ export const BentoGridItem = ({
               <div className="flex flex-col gap-3 lg:gap-8">
                 <span className="py-4 px-3 rounded-lg text-center bg-[#10132E]" />
 
-                {["SwiftUI", "Redux", "Three.js"].map((item) => (
+                {rightLists.map((item) => (
                   <span
                     key={item}
                     className="py-2 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]"
@@ -134,6 +161,26 @@ export const BentoGridItem = ({
                   </span>
                 ))}
               </div>
+            </div>
+          )}
+
+          {id === 6 && (
+            <div className="mt-5 relative">
+              <div
+                className={`absolute -bottom-5 right-0 ${
+                  copied ? "block" : "block"
+                }`}
+              >
+                <Lottie options={defaultOptions} height={200} width={400} />
+              </div>
+
+              <MagicButton
+                title={copied ? "Email is Copied!" : "Copy my email"}
+                icon={<IoCopyOutline />}
+                iconPosition="left"
+                otherClasses="!bg-[#161A31]"
+                handleClick={handleCopy}
+              />
             </div>
           )}
         </div>
