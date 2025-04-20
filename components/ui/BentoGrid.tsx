@@ -33,8 +33,6 @@ export const BentoGridItem = ({
   className,
   title,
   description,
-  // header,
-  // icon,
   id,
   img,
   imgClassName,
@@ -44,16 +42,14 @@ export const BentoGridItem = ({
   className?: string;
   title?: string | React.ReactNode;
   description?: string | React.ReactNode;
-  // header?: React.ReactNode;
-  // icon?: React.ReactNode;
   id?: number;
   img?: string;
   imgClassName?: string;
   titleClassName?: string;
   spareImg?: string;
 }) => {
-  const leftLists = ["React.js", "Next.js", "TypeScript"];
-  const rightLists = ["SwiftUI", "Redux", "Three.js"];
+  const leftList = ["React.js", "Next.js", "TypeScript"];
+  const rightList = ["SwiftUI", "Redux", "Three.js"];
 
   const [copied, setCopied] = useState(false);
 
@@ -112,16 +108,15 @@ export const BentoGridItem = ({
           )}
         </div>
 
-        {id === 6 && (
-          <BackgroundGradientAnimation>
-            <div className="absolute z-50 flex items-center justify-center text-white font-bold" />
-          </BackgroundGradientAnimation>
-        )}
+        {id === 6 && <BackgroundGradientAnimation />}
 
         <div
           className={cn(
             titleClassName,
-            "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10"
+            `${
+              id !== 6 &&
+              "group-hover/bento:translate-x-2 transition duration-200"
+            } relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10`
           )}
         >
           <div className="font-sans text-sm font-extralight text-[#c1c2d3] md:text-xs lg:text-base z-10">
@@ -135,9 +130,9 @@ export const BentoGridItem = ({
           {id === 2 && <GlobeDemo />}
 
           {id === 3 && (
-            <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
-              <div className="flex flex-col gap-3 lg:gap-8">
-                {leftLists.map((item) => (
+            <div className="flex gap-1 lg:gap-5 w-fit absolute right-0">
+              <div className="flex flex-col gap-3 lg:gap-4">
+                {leftList.map((item) => (
                   <span
                     key={item}
                     className="py-2 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]"
@@ -149,10 +144,10 @@ export const BentoGridItem = ({
                 <span className="py-4 px-3 rounded-lg text-center bg-[#10132E]" />
               </div>
 
-              <div className="flex flex-col gap-3 lg:gap-8">
+              <div className="flex flex-col gap-3 lg:gap-4">
                 <span className="py-4 px-3 rounded-lg text-center bg-[#10132E]" />
 
-                {rightLists.map((item) => (
+                {rightList.map((item) => (
                   <span
                     key={item}
                     className="py-2 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]"
@@ -166,11 +161,7 @@ export const BentoGridItem = ({
 
           {id === 6 && (
             <div className="mt-5 relative">
-              <div
-                className={`absolute -bottom-5 right-0 ${
-                  copied ? "block" : "block"
-                }`}
-              >
+              <div className={`absolute -bottom-5 right-0`}>
                 <Lottie options={defaultOptions} height={200} width={400} />
               </div>
 

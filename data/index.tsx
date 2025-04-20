@@ -112,7 +112,7 @@ export const gridItems = [
 
   {
     id: 5,
-    title: "Currently building a JS Animation library",
+    title: "Currently building the Consumrz.com app",
     description: "The Inside Scoop",
     // className: "md:col-span-3 md:row-span-2",
     className: "md:col-span-3 md:row-span-2",
