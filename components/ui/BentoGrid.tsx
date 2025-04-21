@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { BackgroundGradientAnimation } from "./GradientBackground.tsx";
-import { GlobeDemo } from "./GridGlobe.tsx";
+// import { GlobeDemo } from "./GridGlobe.tsx";
 import { IoCopyOutline } from "react-icons/io5";
 import MagicButton from "./MagicButton.tsx";
 import Lottie from "react-lottie";
@@ -127,7 +127,7 @@ export const BentoGridItem = ({
             {title}
           </div>
 
-          {id === 2 && <GlobeDemo />}
+          {/* {id === 2 && <GlobeDemo />} */}
 
           {id === 3 && (
             <div className="flex gap-1 lg:gap-5 w-fit absolute right-0">

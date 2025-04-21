@@ -5,6 +5,7 @@ import { AnimatedLines } from "../components/ui/GoogleGeminyEffect.tsx";
 import { FloatingNav } from "../components/ui/FloatingNavbar.tsx";
 import Grid from "../components/Grid.tsx";
 import { navItems } from "../data/index.tsx";
+import RecentProjects from "../components/RecentProjects.tsx";
 
 export default function Home() {
   // FIXME use it
@@ -34,6 +35,7 @@ export default function Home() {
         <Hero_v2 />
         <AnimatedLines />
         <Grid />
+        <RecentProjects />
       </div>
     </main>
   );
