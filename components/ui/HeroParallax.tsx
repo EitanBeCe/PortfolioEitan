@@ -17,7 +17,7 @@ export const HeroParallax = ({
   myProjects: {
     title: string;
     link: string;
-    thumbnail: string;
+    img: string;
   }[];
 }) => {
   const firstRow = myProjects.slice(0, 5);
@@ -137,7 +137,7 @@ export const ProductCard = ({
   product: {
     title: string;
     link: string;
-    thumbnail: string;
+    img: string;
   };
   translate: MotionValue<number>;
 }) => {
@@ -160,7 +160,7 @@ export const ProductCard = ({
         rel="noopener noreferrer"
       >
         <Image
-          src={product.thumbnail}
+          src={product.img}
           height="600"
           width="600"
           className="object-cover object-left-top absolute h-full w-full inset-0"

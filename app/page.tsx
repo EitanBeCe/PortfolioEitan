@@ -26,11 +26,13 @@ export default function Home() {
     // <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
     <main className="relative bg-black-100 flex justify-center items-center flex-col mx-auto">
       <div className="max-w-7xl w-full">
+        {/* // FIXME: не отображает на маленьких девайсах */}
         <FloatingNav navItems={navItems} />
 
         {/* <Hero /> */}
 
         {/* // FIXME: тут только с прошлого портфолио, надо добавить новые проекты. И добавить ссыль на гитхаб. */}
+        {/* // FIXME: Каритнки мб в ГПТ */}
         {/* // FIXME height of hero when 3 rows of projects are added */}
         <Hero_v2 />
         <AnimatedLines />
