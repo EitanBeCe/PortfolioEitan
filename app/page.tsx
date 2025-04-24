@@ -38,6 +38,8 @@ export default function Home() {
         <AnimatedLines />
         <Grid />
         <RecentProjects />
+
+        {/* // FIXME где ссыль на гитхаб линкедин имейл? Можно глянуть новый компонент на Aceternity */}
       </div>
     </main>
   );
