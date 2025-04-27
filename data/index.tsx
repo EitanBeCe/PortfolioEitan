@@ -158,7 +158,7 @@ export const projects = [
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
-  { name: "Testimonials", link: "#testimonials" },
+  { name: "Experience", link: "#experience" },
   { name: "Contact", link: "#contact" },
 ];
 
@@ -303,21 +303,21 @@ export const workExperience = [
   },
   {
     id: 2,
-    title: "Mobile App Dev - JSM Tech",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
-    className: "md:col-span-2", // change to md:col-span-2
+    title: "Mobile App Dev - SwiftUI",
+    desc: "Designed and developed mobile app for iOS platforms using SwiftUI and NovaUI.",
+    className: "md:col-span-2",
     thumbnail: "/exp2.svg",
   },
   {
     id: 3,
-    title: "Freelance App Dev Project",
-    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
-    className: "md:col-span-2", // change to md:col-span-2
+    title: "App Developer at Consumrz.com",
+    desc: "Developed a cross-platform App in a startup with our team, from initial concept to deployment on app stores.",
+    className: "md:col-span-2",
     thumbnail: "/exp3.svg",
   },
   {
     id: 4,
-    title: "Lead Frontend Developer",
+    title: "Application Manager, Lead Frontend Developer at Consumrz.com",
     desc: "Developed and maintained user-facing features using modern frontend technologies.",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",

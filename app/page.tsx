@@ -1,11 +1,12 @@
 import React from "react";
-import Hero from "../components/Hero.tsx";
 import Hero_v2 from "../components/Hero_v2.tsx";
 import { AnimatedLines } from "../components/ui/GoogleGeminyEffect.tsx";
 import { FloatingNav } from "../components/ui/FloatingNavbar.tsx";
 import Grid from "../components/Grid.tsx";
 import { navItems } from "../data/index.tsx";
 import RecentProjects from "../components/RecentProjects.tsx";
+import Experience from "../components/Experience.tsx";
+import Approach from "../components/Approach.tsx";
 
 export default function Home() {
   // FIXME use it
@@ -26,18 +27,18 @@ export default function Home() {
     // <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
     <main className="relative bg-black-100 flex justify-center items-center flex-col mx-auto">
       <div className="max-w-7xl w-full">
-        {/* // FIXME: не отображает на маленьких девайсах */}
+        {/* // FIXME: не отображает на маленьких девайсах. чек когда допройду курс */}
         <FloatingNav navItems={navItems} />
 
         {/* <Hero /> */}
 
-        {/* // FIXME: тут только с прошлого портфолио, надо добавить новые проекты. И добавить ссыль на гитхаб. */}
         {/* // FIXME: Каритнки мб в ГПТ */}
-        {/* // FIXME height of hero when 3 rows of projects are added */}
         <Hero_v2 />
         <AnimatedLines />
         <Grid />
         <RecentProjects />
+        <Experience />
+        <Approach />
 
         {/* // FIXME где ссыль на гитхаб линкедин имейл? Можно глянуть новый компонент на Aceternity */}
       </div>
