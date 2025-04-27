@@ -7,6 +7,7 @@ import { navItems } from "../data/index.tsx";
 import RecentProjects from "../components/RecentProjects.tsx";
 import Experience from "../components/Experience.tsx";
 import Approach from "../components/Approach.tsx";
+import Footer from "../components/Footer.tsx";
 
 export default function Home() {
   // FIXME use it
@@ -33,12 +34,14 @@ export default function Home() {
         {/* <Hero /> */}
 
         {/* // FIXME: Каритнки мб в ГПТ */}
+        {/* // FIXME: ДОБАВИТЬ КАКИЕ ЗНАЮ ЯЗЫКИ */}
         <Hero_v2 />
         <AnimatedLines />
         <Grid />
         <RecentProjects />
         <Experience />
         <Approach />
+        <Footer />
 
         {/* // FIXME где ссыль на гитхаб линкедин имейл? Можно глянуть новый компонент на Aceternity */}
       </div>
