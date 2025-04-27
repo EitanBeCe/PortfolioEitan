@@ -5,7 +5,7 @@ import { Button } from "./ui/MovingBorders.tsx";
 
 const Experience = () => {
   return (
-    <section className="px-8" id="experience">
+    <section className="px-8 py-20" id="experience">
       <h1 className="heading">
         My <span className="text-purple">work experience</span>
       </h1>
