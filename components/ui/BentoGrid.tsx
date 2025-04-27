@@ -1,18 +1,29 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { BackgroundGradientAnimation } from "./GradientBackground.tsx";
+// import { BackgroundGradientAnimation } from "./GradientBackground.tsx";
 import { IoCopyOutline } from "react-icons/io5";
 import MagicButton from "./MagicButton.tsx";
-import Lottie from "react-lottie";
 import { useState } from "react";
 import animationData from "@/data/confetti.json";
+// import Lottie from "lottie-react";
 import dynamic from "next/dynamic";
 
 const GlobeDemo = dynamic(
   () => import("./GridGlobe").then((mod) => mod.GlobeDemo),
   { ssr: false }
 );
+
+const BackgroundGradientAnimation = dynamic(
+  () =>
+    import("./GradientBackground").then(
+      (mod) => mod.BackgroundGradientAnimation
+    ),
+  { ssr: false }
+);
+
+// const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 export const BentoGrid = ({
   className,
@@ -57,20 +68,22 @@ export const BentoGridItem = ({
   const rightList = ["SwiftUI", "Redux", "Three.js"];
 
   const [copied, setCopied] = useState(false);
+  const [animationFinished, setAnimationFinished] = useState(false);
 
-  const defaultOptions = {
-    loop: copied,
-    autoplay: copied,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
+  // const defaultOptions = {
+  //   loop: copied,
+  //   autoplay: copied,
+  //   animationData: animationData,
+  //   rendererSettings: {
+  //     preserveAspectRatio: "xMidYMid slice",
+  //   },
+  // };
 
   const handleCopy = () => {
     const text = "eitanleviberger@gmail.com";
     navigator.clipboard.writeText(text);
     setCopied(true);
+    setAnimationFinished(false);
   };
 
   return (
@@ -166,9 +179,17 @@ export const BentoGridItem = ({
 
           {id === 6 && (
             <div className="mt-5 relative">
-              <div className={`absolute -bottom-5 right-0`}>
-                <Lottie options={defaultOptions} height={200} width={400} />
-              </div>
+              {copied && !animationFinished && (
+                <div className="absolute -bottom-5 right-0">
+                  <Lottie
+                    animationData={animationData}
+                    loop={false}
+                    autoplay
+                    onComplete={() => setAnimationFinished(true)}
+                    style={{ height: 200, width: 400 }}
+                  />
+                </div>
+              )}
 
               <MagicButton
                 title={copied ? "Email is Copied!" : "Copy my email"}
