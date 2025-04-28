@@ -3,6 +3,7 @@
 import React from "react";
 import { BackgroundGradientAnimation } from "./ui/GradientBackground.tsx";
 import { useEffect, useState } from "react";
+import { div } from "framer-motion/client";
 
 const MyPhoto = () => {
   const [rotation, setRotation] = useState(0);
@@ -18,7 +19,7 @@ const MyPhoto = () => {
   }, []);
 
   return (
-    <div className="relative h-[100vh] w-[100vh] mt-24 rounded-full mx-auto overflow-hidden flex items-center justify-center">
+    <div className="relative h-[90vw] w-[90vw] sm:h-[100vh] sm:w-[100vh] sm:mt-24 rounded-full mx-auto overflow-hidden flex items-center justify-center">
       <BackgroundGradientAnimation />
 
       <svg
