@@ -3,10 +3,10 @@
 import React from "react";
 import { BackgroundGradientAnimation } from "./ui/GradientBackground.tsx";
 import { useEffect, useState } from "react";
-import { div } from "framer-motion/client";
 
 const MyPhoto = () => {
   const [rotation, setRotation] = useState(0);
+  const [vwOrVh, setVwOrVh] = useState<"vw" | "vh">("vh");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,8 +18,25 @@ const MyPhoto = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < window.innerHeight) {
+        setVwOrVh("vw");
+      } else {
+        setVwOrVh("vh");
+      }
+    };
+
+    handleResize(); // вызов сразу при монтировании
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
-    <div className="relative h-[90vw] w-[90vw] sm:h-[100vh] sm:w-[100vh] sm:mt-24 rounded-full mx-auto overflow-hidden flex items-center justify-center">
+    <div
+      className={`relative h-[90${vwOrVh}] w-[90${vwOrVh}] sm:h-[98${vwOrVh}] sm:w-[98${vwOrVh}] sm:mt-24 rounded-full mx-auto overflow-hidden flex items-center justify-center`}
+    >
       <BackgroundGradientAnimation />
 
       <svg

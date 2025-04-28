@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 // import { BackgroundGradientAnimation } from "./GradientBackground.tsx";
 import { IoCopyOutline } from "react-icons/io5";
 import MagicButton from "./MagicButton.tsx";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import animationData from "@/data/confetti.json";
 // import Lottie from "lottie-react";
 import dynamic from "next/dynamic";
@@ -86,6 +86,14 @@ export const BentoGridItem = ({
     setAnimationFinished(false);
   };
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    if (window && window.innerWidth < 768) {
+      setIsMobile(true);
+    }
+  }, []);
+
   return (
     <div
       className={cn(
@@ -141,7 +149,7 @@ export const BentoGridItem = ({
             {description}
           </div>
 
-          <div className="font-sans font-bold text-lg lg:text-3xl max-w-96 z-10">
+          <div className="font-sans font-bold text-lg lg:text-3xl max-w-96 z-50">
             {title}
           </div>
 
