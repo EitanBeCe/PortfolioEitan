@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 // import { p, div, svg, filter } from "framer-motion/client";
 import { motion, MotionValue, useScroll, useTransform } from "motion/react";
 // import path from "path";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { TextRevealCard } from "./TextRevealCard.tsx";
 // import { div } from "framer-motion/client";
 // import style from "styled-jsx/style";
@@ -57,6 +57,14 @@ const GoogleGeminiEffect = ({
   description?: string;
   className?: string;
 }) => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    if (window && window.innerWidth < 768) {
+      setIsMobile(true);
+    }
+  }, []);
+
   return (
     // <div className={cn("sticky top-80", className)}>
     <div
@@ -198,14 +206,16 @@ const GoogleGeminiEffect = ({
           </filter>
         </defs>
       </svg>
-
-      <TextRevealCard
-        text="To what you've missed"
-        revealText="Projects that worth it"
-        // className="absolute top-96 left-1/2 -translate-x-1/3 w-[36rem]"
-        // className="left-[34vw] w-[50vw] top-[40vh]"
-        className="mx-auto translate-x-[8vw] sm:translate-x-[8vw] w-[60vw] sm:w-[50vw] top-[20vh] sm:top-[40vh]"
-      />
+      {!isMobile && (
+        <TextRevealCard
+          text="To what you've missed"
+          revealText="Projects that worth it"
+          // className="absolute top-96 left-1/2 -translate-x-1/3 w-[36rem]"
+          // className="left-[34vw] w-[50vw] top-[40vh]"
+          className="mx-auto translate-x-[8vw] sm:translate-x-[8vw] w-[60vw] sm:w-[50vw] top-[20vh] sm:top-[40vh]"
+        />
+      )}
+      {isMobile && <div className="h-52" />}
     </div>
   );
 };
