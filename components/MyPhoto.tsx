@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 
 const MyPhoto = () => {
   const [rotation, setRotation] = useState(0);
-  const [vwOrVh, setVwOrVh] = useState<"vw" | "vh">("vh");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,24 +17,16 @@ const MyPhoto = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < window.innerHeight) {
-        setVwOrVh("vw");
-      } else {
-        setVwOrVh("vh");
-      }
-    };
-
-    handleResize(); // вызов сразу при монтировании
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   return (
     <div
-      className={`relative h-[90${vwOrVh}] w-[90${vwOrVh}] sm:h-[98${vwOrVh}] sm:w-[98${vwOrVh}] sm:mt-24 rounded-full mx-auto overflow-hidden flex items-center justify-center`}
+      className="relative 
+      w-[90vw] h-[90vw]
+      sm:w-[80vw] sm:h-[80vw] 
+      md:w-[70vw] md:h-[70vw] 
+      lg:w-[90vh] lg:h-[90vh]
+      xl:w-[90vh] xl:h-[90vh]
+      mt-12 lg:mt-24 
+      rounded-full mx-auto overflow-hidden flex items-center justify-center"
     >
       <BackgroundGradientAnimation />
 

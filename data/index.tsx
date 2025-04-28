@@ -90,19 +90,19 @@ export const myProjects = [
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
   },
   {
-    title: "Linkedin",
-    link: "https://github.com/EitanBeCe",
-    img: "/assets/projectThumbnails/linkedin.png",
-    des: "My profile with all my experience, projects and story",
-    iconLists: [],
-  },
-  {
     // Duplicate for Hero with other photo
     title: "Consumrz.com.",
     des: "Company I'm currently working in. Creating this amazing powerfull App for more than 3 years",
     img: "/assets/projectThumbnails/consumrz3.png",
     iconLists: ["/ts.svg"],
     link: "https://consumrz.com/",
+  },
+  {
+    title: "Linkedin",
+    link: "https://github.com/EitanBeCe",
+    img: "/assets/projectThumbnails/linkedin.png",
+    des: "My profile with all my experience, projects and story",
+    iconLists: [],
   },
   // {
   //   // Duplicate for Hero
