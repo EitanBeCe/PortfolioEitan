@@ -70,9 +70,11 @@
   * {
     @apply border-border !scroll-smooth;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+
   button {
     @apply active:outline-none;
   }
@@ -86,4 +88,22 @@
   .black-gradient {
     background: linear-gradient(90deg, #161a31 0%, #06091f 100%);
   }
+}
+
+@keyframes float-up-down {
+  0% {
+    object-position: center 20%;
+  }
+
+  50% {
+    object-position: center 34%;
+  }
+
+  100% {
+    object-position: center 20%;
+  }
+}
+
+.float-animation {
+  animation: float-up-down 6s ease-in-out infinite;
 }
