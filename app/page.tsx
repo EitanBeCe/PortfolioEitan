@@ -9,11 +9,10 @@ import Experience from "../components/Experience.tsx";
 import Approach from "../components/Approach.tsx";
 import Footer from "../components/Footer.tsx";
 import { MacbookScreen } from "../components/MacbookScreen.tsx";
+import MyPhoto from "../components/MyPhoto.tsx";
+import { LampFooter } from "../components/ui/Lamp.tsx";
 
 export default function Home() {
-  // FIXME use it
-  // https://ui.aceternity.com/components/background-gradient-animation градиент под фотку как на прошлом портфолио токо круче
-
   return (
     <main className="relative bg-black-100 flex justify-center items-center flex-col mx-auto">
       <div className="max-w-7xl w-full">
@@ -23,11 +22,13 @@ export default function Home() {
 
         <Hero_v2 />
         <AnimatedLines />
+        <MyPhoto />
         <Grid />
         <RecentProjects />
         <Experience />
         <Approach />
         <MacbookScreen />
+        <LampFooter />
         <Footer />
       </div>
     </main>

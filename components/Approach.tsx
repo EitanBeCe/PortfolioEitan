@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from "motion/react";
 
 const Approach = () => {
   return (
-    <section className="w-full py-20">
+    <section className="w-full py-20 px-8">
       <h1 className="heading">
         My <span className="text-purple">approach</span>
       </h1>
