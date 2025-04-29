@@ -1,16 +1,19 @@
 <div align="center">
   <br />
-    <a href="https://youtu.be/FTH6Dn3AyIQ" target="_blank">
-      <img src="https://github.com/adrianhajdin/portfolio/assets/151519281/c6ca3c03-6cb7-4f67-a9b9-a73da5bfa0d8" alt="Project Banner">
+    <a href="" target="_blank"> // FIXME link
+      <img src="./public/preview.png" alt="Project Banner">
     </a>
   <br />
 
   <h3 align="center">A Modern Next.js Portfolio</h3>
 </div>
 
+<!-- После деплоя -->
+<img src="https://eitan.dev/preview.png" alt="Preview" width="600" />
+
 ## 🚨 Deployed website
 
-<a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a>.
+<a href="" target="_blank"><b>Eitan's Portfolio</b></a>. // FIXME link
 
 ## <a name="introduction">🤖 Introduction</a>
 
