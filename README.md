@@ -1,6 +1,6 @@
 <div align="center">
   <br />
-    <a href="" target="_blank"> // FIXME link
+    <a href="" target="_blank">
       <img src="./public/preview.png" alt="Project Banner">
     </a>
   <br />
@@ -8,12 +8,15 @@
   <h3 align="center">A Modern Next.js Portfolio</h3>
 </div>
 
+<!-- // FIXME link -->
 <!-- После деплоя -->
-<img src="https://eitan.dev/preview.png" alt="Preview" width="600" />
+<!-- <img src="https://eitan.dev/preview.png" alt="Preview" width="600" /> -->
 
 ## 🚨 Deployed website
 
-<a href="" target="_blank"><b>Eitan's Portfolio</b></a>. // FIXME link
+<!-- // FIXME link -->
+
+<a href="" target="_blank"><b>Eitan's Portfolio</b></a>.
 
 ## <a name="introduction">🤖 Introduction</a>
 
