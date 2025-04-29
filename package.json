@@ -13,7 +13,7 @@
     "@react-three/fiber": "^8.18.0",
     "@tabler/icons-react": "^3.31.0",
     "clsx": "^2.1.1",
-    "framer-motion": "^12.5.0",
+    "framer-motion": "^12.9.1",
     "lottie-react": "^2.4.1",
     "mini-svg-data-uri": "^1.4.4",
     "motion": "^12.9.2",

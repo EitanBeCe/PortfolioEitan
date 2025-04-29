@@ -115,7 +115,7 @@ export const TextRevealCard = ({
 
         <div className=" overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,white,transparent)]">
           {/* <p className="text-base sm:text-[2rem] py-10 font-bold bg-clip-text text-transparent bg-[#323238]"> */}
-          <p className="text-sm sm:text-[3vw] py-10 font-bold bg-clip-text text-transparent bg-[#323238]">
+          <p className="text-sm sm:text-[2.8vw] py-10 font-bold bg-clip-text text-transparent bg-[#323238]">
             {text}
           </p>
           <MemoizedStars />

@@ -209,7 +209,7 @@ const GoogleGeminiEffect = ({
       {!isMobile && (
         <TextRevealCard
           text="To what you've missed"
-          revealText="Projects that worth it"
+          revealText="Projects worth seeing"
           // className="absolute top-96 left-1/2 -translate-x-1/3 w-[36rem]"
           // className="left-[34vw] w-[50vw] top-[40vh]"
           className="mx-auto translate-x-[8vw] sm:translate-x-[8vw] w-[60vw] sm:w-[50vw] top-[20vh] sm:top-[40vh]"

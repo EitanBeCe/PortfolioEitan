@@ -104,6 +104,14 @@ export const myProjects = [
     des: "My profile with all my experience, projects and story",
     iconLists: [],
   },
+  {
+    // Duplicate for Hero
+    title: "Expenses tracker - React.",
+    link: "https://silly-halva-f811ec.netlify.app/",
+    img: "/assets/projectThumbnails/expenses.png",
+    des: "Nice side project created for adding and tracking your expenses. Beautifully and dynamically displays your expenses during the months of the year.",
+    iconLists: ["/re.svg"],
+  },
   // {
   //   // Duplicate for Hero
   //   title: "GitHub.",
