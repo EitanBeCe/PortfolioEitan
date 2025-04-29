@@ -9,11 +9,11 @@ export const metadata: Metadata = {
   title: "Eitan's Portfolio",
   description: "Modern & Minimalist web developer portfolio.",
   keywords: "web development, frontend, React, Next.js, Tailwind, portfolio",
-  authors: [{ name: "Eitan", url: "https://eitanportfolio.netlify.app" }], // FIXME: when deployed
+  authors: [{ name: "Eitan", url: "https://eitanportfolio.netlify.app" }],
   openGraph: {
     title: "Eitan's Portfolio",
     description: "Modern & Minimalist web developer portfolio.",
-    url: "https://eitanportfolio.netlify.app", // FIXME: when deployed
+    url: "https://eitanportfolio.netlify.app",
     siteName: "Eitan's Portfolio",
     images: [
       {

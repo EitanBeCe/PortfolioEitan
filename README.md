@@ -8,13 +8,7 @@
   <h3 align="center">A Modern Next.js Portfolio</h3>
 </div>
 
-<!-- // FIXME link -->
-<!-- После деплоя -->
-<!-- <img src="https://eitan.dev/preview.png" alt="Preview" width="600" /> -->
-
 ## 🚨 Deployed website
-
-<!-- // FIXME link -->
 
 <a href="https://eitanportfolio.netlify.app" target="_blank"><b>Eitan's Portfolio</b></a>.
 
