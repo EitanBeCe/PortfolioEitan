@@ -1,7 +1,7 @@
 <div align="center">
   <br />
     <a href="" target="_blank">
-      <img src="./public/portfolio.png" alt="Project Banner">
+      <img src="https://eitanportfolio.netlify.app/portfolio.png" alt="Project Banner">
     </a>
   <br />
 
@@ -16,7 +16,7 @@
 
 <!-- // FIXME link -->
 
-<a href="" target="_blank"><b>Eitan's Portfolio</b></a>.
+<a href="https://eitanportfolio.netlify.app" target="_blank"><b>Eitan's Portfolio</b></a>.
 
 ## <a name="introduction">🤖 Introduction</a>
 
