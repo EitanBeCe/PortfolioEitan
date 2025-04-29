@@ -1,13 +1,3 @@
-WHEN FINISHED CHECK: // FIXME: when deployed
-
-React.js
-Aceternity UI. Spotlight, GridBackground, TextGenerateEffect, GoogleGeminiEffect, Lamp effect, TextRevealCard, FloatingNavbar, Bento grid, BackgroundGradientAnimation, Globe
-Typescript
-Next.js
-TailwindCSS
-ThemeProvider
-React Icons
-
 <div align="center">
   <br />
     <a href="https://youtu.be/FTH6Dn3AyIQ" target="_blank">
@@ -29,9 +19,12 @@ Built with Next.js for handling the user interface, Three.js for rendering 3D el
 ## <a name="tech-stack">⚙️ Tech Stack</a>
 
 - Next.js
+- React.js
 - Three.js
 - Framer Motion
+- Typescript
 - Tailwind CSS
+- Aceternity UI components
 
 ## <a name="features">🔋 Features</a>
 
