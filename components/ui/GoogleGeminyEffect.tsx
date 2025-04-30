@@ -5,8 +5,7 @@ import { motion, MotionValue, useScroll, useTransform } from "motion/react";
 // import path from "path";
 import React, { useEffect, useState } from "react";
 import { TextRevealCard } from "./TextRevealCard.tsx";
-// import { div } from "framer-motion/client";
-// import style from "styled-jsx/style";
+import { LazyAmimated } from "../LazyLoad.tsx";
 
 export function AnimatedLines() {
   const ref = React.useRef(null);
@@ -207,13 +206,15 @@ const GoogleGeminiEffect = ({
         </defs>
       </svg>
       {!isMobile && (
-        <TextRevealCard
-          text="To what you've missed"
-          revealText="Projects worth seeing"
-          // className="absolute top-96 left-1/2 -translate-x-1/3 w-[36rem]"
-          // className="left-[34vw] w-[50vw] top-[40vh]"
-          className="mx-auto translate-x-[8vw] sm:translate-x-[8vw] w-[60vw] sm:w-[50vw] top-[20vh] sm:top-[40vh]"
-        />
+        <LazyAmimated rootMargin="0px 0px -40% 0px">
+          <TextRevealCard
+            text="To what you've missed"
+            revealText="Projects worth seeing"
+            // className="absolute top-96 left-1/2 -translate-x-1/3 w-[36rem]"
+            // className="left-[34vw] w-[50vw] top-[40vh]"
+            className="mx-auto translate-x-[8vw] sm:translate-x-[8vw] w-[60vw] sm:w-[50vw] top-[20vh] sm:top-[40vh]"
+          />
+        </LazyAmimated>
       )}
       {isMobile && <div className="h-52" />}
     </div>

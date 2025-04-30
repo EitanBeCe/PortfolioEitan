@@ -1,6 +1,7 @@
 import { FaLocationArrow } from "react-icons/fa6";
 import MagicButton from "./ui/MagicButton.tsx";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect.tsx";
+import { motion } from "framer-motion";
 
 export const HeroTexts = () => {
   return (
@@ -10,10 +11,16 @@ export const HeroTexts = () => {
           Dynamic Web Magic with Next.js
         </h2>
 
-        <TextGenerateEffect
-          className="text-center text-[40px] md:text-5xl lg:text-6xl"
-          words="Transforming Concepts into Seamless User Experiences"
-        />
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        >
+          <TextGenerateEffect
+            className="text-center text-[40px] md:text-5xl lg:text-6xl"
+            words="Transforming Concepts into Seamless User Experiences"
+          />
+        </motion.div>
 
         <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
           Hi, I&apos;m Eitan, a React developer based in Israel

@@ -11,16 +11,18 @@ import Footer from "../components/Footer.tsx";
 import { MacbookScreen } from "../components/MacbookScreen.tsx";
 import MyPhoto from "../components/MyPhoto.tsx";
 import { LampFooter } from "../components/ui/Lamp.tsx";
+// import { LazyAmimated } from "../components/LazyLoad.tsx";
 
 export default function Home() {
   return (
     <main className="relative bg-black-100 flex justify-center items-center flex-col mx-auto">
       <div className="max-w-7xl w-full">
         <FloatingNav navItems={navItems} />
-
         {/* <Hero /> */}
 
         {/* // FIXME грузить катринки с анимацией */}
+        {/* // FIXME чек по правильному формату картинок */}
+        {/* // FIXME чек замену на <Image> */}
         <Hero_v2 />
         <AnimatedLines />
         <MyPhoto />
@@ -29,8 +31,11 @@ export default function Home() {
         <Experience />
         <Approach />
         <MacbookScreen />
+
+        {/* <LazyAmimated> */}
         <LampFooter />
         <Footer />
+        {/* </LazyAmimated> */}
       </div>
     </main>
   );

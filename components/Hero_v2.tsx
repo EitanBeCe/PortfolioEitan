@@ -5,7 +5,6 @@ import { myProjects } from "../data/index.tsx";
 
 const Hero_v2 = () => {
   return (
-    // <div className="sm:-mx-10 -mx-5">
     <div>
       <LampHero />
       <HeroParallax myProjects={myProjects} />

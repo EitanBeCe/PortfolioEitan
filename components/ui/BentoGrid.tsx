@@ -6,22 +6,23 @@ import MagicButton from "./MagicButton.tsx";
 import { useEffect, useState } from "react";
 import animationData from "@/data/confetti.json";
 import dynamic from "next/dynamic";
+import { LazyAmimated, LazyLoad } from "../LazyLoad.tsx";
 
 const GlobeDemo = dynamic(
   () => import("./GridGlobe").then((mod) => mod.GlobeDemo),
   { ssr: false }
 );
 
-function LazyGlobeWrapper() {
-  const [mounted, setMounted] = useState(false);
+// function LazyGlobeWrapper() {
+//   const [mounted, setMounted] = useState(false);
 
-  useEffect(() => {
-    const timer = setTimeout(() => setMounted(true), 2000);
-    return () => clearTimeout(timer);
-  }, []);
+//   useEffect(() => {
+//     const timer = setTimeout(() => setMounted(true), 2000);
+//     return () => clearTimeout(timer);
+//   }, []);
 
-  return mounted ? <GlobeDemo /> : null;
-}
+//   return mounted ? <GlobeDemo /> : null;
+// }
 
 const BackgroundGradientAnimation = dynamic(
   () =>
@@ -162,8 +163,14 @@ export const BentoGridItem = ({
             {title}
           </div>
 
-          {/* {id === 2 && <GlobeDemo />} */}
-          {id === 2 && <LazyGlobeWrapper />}
+          {/* {id === 2 && <LazyGlobeWrapper />} */}
+          {id === 2 && (
+            <LazyLoad>
+              {/* <LazyAmimated> */}
+              <GlobeDemo />
+              {/* </LazyAmimated> */}
+            </LazyLoad>
+          )}
 
           {id === 3 && (
             <div className="flex gap-1 lg:gap-5 w-fit absolute right-0">
@@ -199,13 +206,15 @@ export const BentoGridItem = ({
             <div className="mt-5 relative">
               {copied && !animationFinished && (
                 <div className="absolute -bottom-5 right-0">
-                  <Lottie
-                    animationData={animationData}
-                    loop={false}
-                    autoplay
-                    onComplete={() => setAnimationFinished(true)}
-                    style={{ height: 200, width: 400 }}
-                  />
+                  <LazyAmimated rootMargin="200px">
+                    <Lottie
+                      animationData={animationData}
+                      loop={false}
+                      autoplay
+                      onComplete={() => setAnimationFinished(true)}
+                      style={{ height: 200, width: 400 }}
+                    />
+                  </LazyAmimated>
                 </div>
               )}
 
