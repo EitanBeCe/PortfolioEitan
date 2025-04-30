@@ -1,18 +1,27 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-// import { BackgroundGradientAnimation } from "./GradientBackground.tsx";
 import { IoCopyOutline } from "react-icons/io5";
 import MagicButton from "./MagicButton.tsx";
 import { useEffect, useState } from "react";
 import animationData from "@/data/confetti.json";
-// import Lottie from "lottie-react";
 import dynamic from "next/dynamic";
 
 const GlobeDemo = dynamic(
   () => import("./GridGlobe").then((mod) => mod.GlobeDemo),
   { ssr: false }
 );
+
+function LazyGlobeWrapper() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setMounted(true), 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  return mounted ? <GlobeDemo /> : null;
+}
 
 const BackgroundGradientAnimation = dynamic(
   () =>
@@ -153,7 +162,8 @@ export const BentoGridItem = ({
             {title}
           </div>
 
-          {id === 2 && <GlobeDemo />}
+          {/* {id === 2 && <GlobeDemo />} */}
+          {id === 2 && <LazyGlobeWrapper />}
 
           {id === 3 && (
             <div className="flex gap-1 lg:gap-5 w-fit absolute right-0">

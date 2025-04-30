@@ -20,6 +20,7 @@ export default function Home() {
 
         {/* <Hero /> */}
 
+        {/* // FIXME грузить катринки с анимацией */}
         <Hero_v2 />
         <AnimatedLines />
         <MyPhoto />
