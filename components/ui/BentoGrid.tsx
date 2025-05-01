@@ -159,13 +159,6 @@ export const BentoGridItem = ({
                 <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40" />
                 <div className="absolute w-full h-72 md:h-full z-10">
                   <AnimatedGlobe />
-                  {/* <Image
-                    src="/globe.png"
-                    alt="Globe visualization"
-                    fill
-                    className="object-contain pointer-events-none select-none"
-                    priority
-                  /> */}
                 </div>
               </div>
             </div>

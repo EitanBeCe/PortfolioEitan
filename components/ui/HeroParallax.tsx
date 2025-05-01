@@ -42,6 +42,7 @@ export const HeroParallax = ({
     link: string;
     img: string;
     squareImg?: string;
+    isTop?: boolean;
   }[];
 }) => {
   const firstRow = myProjects.slice(0, 5);

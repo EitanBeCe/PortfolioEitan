@@ -144,7 +144,7 @@ export const Lid = ({
           className="absolute inset-0 flex items-center justify-center rounded-lg bg-[#010101] m-3"
         >
           <img
-            src="/assets/eitan/Eitan12.jpg"
+            src="/assets/eitan/Eitan12.webp"
             alt="Eitan"
             className="absolute inset-0 h-full w-full rounded-lg object-cover float-animation"
 

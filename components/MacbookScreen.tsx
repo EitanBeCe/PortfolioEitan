@@ -5,7 +5,10 @@ export function MacbookScreen() {
   return (
     <div className="overflow-hidden w-full">
       {/* <LazyAmimated> */}
-      <MacbookScroll src={`/assets/eitan/Languages.png`} showGradient={false} />
+      <MacbookScroll
+        src={`/assets/eitan/Languages.webp`}
+        showGradient={false}
+      />
       {/* </LazyAmimated> */}
     </div>
   );
