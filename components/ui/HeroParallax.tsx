@@ -11,6 +11,29 @@ import Image from "next/image";
 import Link from "next/link";
 import { HeroTexts } from "../HeroTexts.tsx";
 
+const rowVariants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.4,
+      duration: 0.4,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 20 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut",
+    },
+  },
+};
+
 export const HeroParallax = ({
   myProjects,
 }: {
@@ -99,7 +122,13 @@ export const HeroParallax = ({
         className="max-md:mt-32"
         // Edited motion.divs space and mb
       >
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-[5vw] mb-[5vw]">
+        <motion.div
+          className="flex flex-row-reverse space-x-reverse space-x-[5vw] mb-[5vw]"
+          variants={rowVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.4 }}
+        >
           {firstRow.map((product) => (
             <ProductCard
               product={product}
@@ -108,7 +137,13 @@ export const HeroParallax = ({
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row space-x-[5vw] mb-[5vw]">
+        <motion.div
+          className="flex flex-row space-x-[5vw] mb-[5vw]"
+          variants={rowVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.4 }}
+        >
           {secondRow.map((product) => (
             <ProductCard
               product={product}
@@ -117,7 +152,13 @@ export const HeroParallax = ({
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-[5vw]">
+        <motion.div
+          className="flex flex-row-reverse space-x-reverse space-x-[5vw]"
+          variants={rowVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.4 }}
+        >
           {thirdRow.map((product) => (
             <ProductCard
               product={product}
@@ -145,6 +186,9 @@ export const ProductCard = ({
 }) => {
   return (
     <motion.div
+      variants={cardVariants}
+      // initial="hidden"
+      // animate="show"
       style={{
         x: translate,
       }}

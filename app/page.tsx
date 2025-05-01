@@ -23,6 +23,8 @@ export default function Home() {
         {/* // FIXME грузить катринки с анимацией */}
         {/* // FIXME чек по правильному формату картинок */}
         {/* // FIXME чек замену на <Image> */}
+        {/* // FIXME чек неиспользующиеся картинки */}
+        {/* // FIXME чек скачки скролла */}
         <Hero_v2 />
         <AnimatedLines />
         <MyPhoto />

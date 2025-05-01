@@ -6,23 +6,8 @@ import MagicButton from "./MagicButton.tsx";
 import { useEffect, useState } from "react";
 import animationData from "@/data/confetti.json";
 import dynamic from "next/dynamic";
-import { LazyAmimated, LazyLoad } from "../LazyLoad.tsx";
-
-const GlobeDemo = dynamic(
-  () => import("./GridGlobe").then((mod) => mod.GlobeDemo),
-  { ssr: false }
-);
-
-// function LazyGlobeWrapper() {
-//   const [mounted, setMounted] = useState(false);
-
-//   useEffect(() => {
-//     const timer = setTimeout(() => setMounted(true), 2000);
-//     return () => clearTimeout(timer);
-//   }, []);
-
-//   return mounted ? <GlobeDemo /> : null;
-// }
+import { LazyAmimated } from "../LazyLoad.tsx";
+import Image from "next/image";
 
 const BackgroundGradientAnimation = dynamic(
   () =>
@@ -165,11 +150,23 @@ export const BentoGridItem = ({
 
           {/* {id === 2 && <LazyGlobeWrapper />} */}
           {id === 2 && (
-            <LazyLoad>
-              {/* <LazyAmimated> */}
-              <GlobeDemo />
-              {/* </LazyAmimated> */}
-            </LazyLoad>
+            // <LazyLoad>
+            //   <GlobeDemo />
+            // </LazyLoad>
+            <div className="flex items-center justify-center absolute -left-5 top-10 md:top-36 w-full h-full">
+              <div className="max-w-7xl mx-auto w-full relative overflow-hidden px-4 h-96">
+                <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40" />
+                <div className="absolute w-full h-72 md:h-full z-10">
+                  <Image
+                    src="/globe.png"
+                    alt="Globe visualization"
+                    fill
+                    className="object-contain pointer-events-none select-none"
+                    priority
+                  />
+                </div>
+              </div>
+            </div>
           )}
 
           {id === 3 && (

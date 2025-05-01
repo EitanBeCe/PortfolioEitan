@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@react-three/drei": "^9.56.14",
     "@react-three/fiber": "^8.18.0",
     "@tabler/icons-react": "^3.31.0",
     "clsx": "^2.1.1",
@@ -22,12 +21,9 @@
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.5.0",
-    "react-lottie": "^1.2.10",
-    "svelte-motion": "^0.12.2",
     "tailwind-merge": "^3.2.0",
     "tailwindcss-animate": "^1.0.7",
-    "three": "^0.175.0",
-    "three-globe": "^2.42.4"
+    "three": "^0.175.0"
   },
   "devDependencies": {
     "@types/node": "^20",
