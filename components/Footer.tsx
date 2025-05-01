@@ -1,6 +1,7 @@
 import { FaLocationArrow } from "react-icons/fa6";
 import { socialMedia } from "@/data";
 import MagicButton from "./ui/MagicButton.tsx";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -40,7 +41,13 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
             >
-              <img src={info.img} alt="icons" width={20} height={20} />
+              <Image
+                src={info.img}
+                alt="social icon"
+                width={20}
+                height={20}
+                className="object-contain"
+              />
             </a>
           ))}
         </div>

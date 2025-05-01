@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // FIXME
-  // output: "export",
+  output: "export",
   typescript: {
     ignoreBuildErrors: true,
   },

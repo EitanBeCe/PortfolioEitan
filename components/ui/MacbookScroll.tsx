@@ -23,6 +23,7 @@ import { IconWorld } from "@tabler/icons-react";
 import { IconCommand } from "@tabler/icons-react";
 import { IconCaretLeftFilled } from "@tabler/icons-react";
 import { IconCaretDownFilled } from "@tabler/icons-react";
+import Image from "next/image";
 
 export const MacbookScroll = ({
   src,
@@ -143,13 +144,11 @@ export const Lid = ({
           }}
           className="absolute inset-0 flex items-center justify-center rounded-lg bg-[#010101] m-3"
         >
-          <img
+          <Image
             src="/assets/eitan/Eitan12.webp"
             alt="Eitan"
+            fill
             className="absolute inset-0 h-full w-full rounded-lg object-cover float-animation"
-
-            // className="absolute inset-0 h-full w-full rounded-lg object-cover"
-            // style={{ objectPosition: "center 24%" }}
           />
         </div>
       </div>
@@ -166,9 +165,11 @@ export const Lid = ({
         className="absolute inset-0 h-96 w-[32rem] rounded-2xl bg-[#010101] p-2"
       >
         <div className="absolute inset-0 rounded-lg bg-[#272729]" />
-        <img
+
+        <Image
           src={src as string}
           alt="Languages"
+          fill
           className="absolute inset-0 h-full w-full rounded-lg object-cover object-left-top"
         />
       </motion.div>

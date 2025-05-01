@@ -67,7 +67,7 @@ export const myProjects = [
   {
     title: "Marvel - Marvel API",
     link: "https://wonderful-bunny-bb3b3e.netlify.app/",
-    img: "/assets/projectThumbnails/marvel.jpeg",
+    img: "/assets/projectThumbnails/marvel.webp",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg"],
   },
   {

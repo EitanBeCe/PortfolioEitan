@@ -5,6 +5,7 @@ import { FaLocationArrow } from "react-icons/fa6";
 import { myProjects } from "@/data";
 import { PinContainer } from "./ui/3d-pin";
 import { LazyAmimated } from "./LazyLoad.tsx";
+import Image from "next/image";
 
 const RecentProjects = () => {
   return (
@@ -29,7 +30,12 @@ const RecentProjects = () => {
                       className="relative w-full h-full overflow-hidden lg:rounded-3xl"
                       style={{ backgroundColor: "#13162D" }}
                     >
-                      <img src="/bg.png" alt="bgimg" />
+                      <Image
+                        src="/bg.png"
+                        alt="Background"
+                        fill
+                        className="object-cover"
+                      />
                     </div>
 
                     <img
@@ -42,6 +48,18 @@ const RecentProjects = () => {
                           : "-bottom-[34%] h-[120%] max-sm:h-[110%] rounded-t-xl rotate-3"
                       }`}
                     />
+
+                    {/* <Image
+                      src={img}
+                      alt="cover"
+                      width={302}
+                      height={450}
+                      className={`z-10 absolute ${
+                        title.includes("iPhone")
+                          ? "bottom-0"
+                          : "-bottom-[34%] h-[120%] max-sm:h-[110%] rounded-t-xl rotate-3"
+                      } object-contain`}
+                    /> */}
                   </div>
 
                   <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
