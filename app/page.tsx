@@ -20,7 +20,6 @@ export default function Home() {
         <FloatingNav navItems={navItems} />
         {/* <Hero /> */}
 
-        {/* // FIXME грузить катринки с анимацией */}
         {/* // FIXME чек по правильному формату картинок */}
         {/* // FIXME чек замену на <Image> */}
         {/* // FIXME чек неиспользующиеся картинки */}

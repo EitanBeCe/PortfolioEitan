@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import animationData from "@/data/confetti.json";
 import dynamic from "next/dynamic";
 import { LazyAmimated } from "../LazyLoad.tsx";
-import Image from "next/image";
+import { AnimatedGlobe } from "../AnimatedGlobe.tsx";
 
 const BackgroundGradientAnimation = dynamic(
   () =>
@@ -153,17 +153,19 @@ export const BentoGridItem = ({
             // <LazyLoad>
             //   <GlobeDemo />
             // </LazyLoad>
+
             <div className="flex items-center justify-center absolute -left-5 top-10 md:top-36 w-full h-full">
               <div className="max-w-7xl mx-auto w-full relative overflow-hidden px-4 h-96">
                 <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40" />
                 <div className="absolute w-full h-72 md:h-full z-10">
-                  <Image
+                  <AnimatedGlobe />
+                  {/* <Image
                     src="/globe.png"
                     alt="Globe visualization"
                     fill
                     className="object-contain pointer-events-none select-none"
                     priority
-                  />
+                  /> */}
                 </div>
               </div>
             </div>
