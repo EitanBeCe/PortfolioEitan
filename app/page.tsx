@@ -19,6 +19,11 @@ export default function Home() {
         <FloatingNav navItems={navItems} />
         {/* <Hero /> */}
 
+        {/* // FIXME: ссылки и мейл наверху */}
+        {/* // FIXME: см скрин - годы опыта, кол-во проектов, кол-во коммитов на консюмрз и гитхабе  */}
+        {/* // FIXME: stack наверху (МБ СТАК кружочками) */}
+        {/* // FIXME: чек простоту текстов. swift везде в конец */}
+
         <Hero_v2 />
         <AnimatedLines />
         <MyPhoto />
