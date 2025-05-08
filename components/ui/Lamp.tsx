@@ -2,10 +2,19 @@
 import React from "react";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
+import { LazyLoad } from "../LazyLoad.tsx";
 
 export function LampHero() {
   return (
-    <LampContainer className="absolute left-1/2 -translate-x-1/2 top-64 -translate-y-1/2 max-sm:top-52" />
+    <LazyLoad delay={1000}>
+      <motion.div
+        initial={{ opacity: 0, scale: 1 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+      >
+        <LampContainer className="absolute left-1/2 -translate-x-1/2 top-64 -translate-y-1/2 max-sm:top-52" />
+      </motion.div>
+    </LazyLoad>
   );
 }
 
