@@ -2,6 +2,7 @@ import { FaLocationArrow } from "react-icons/fa6";
 import MagicButton from "./ui/MagicButton.tsx";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect.tsx";
 import { motion } from "framer-motion";
+import SocialMedia from "./SocialMedia.tsx";
 
 export const HeroTexts = () => {
   return (
@@ -33,6 +34,10 @@ export const HeroTexts = () => {
             iconPosition="right"
           />
         </a>
+
+        <div className="mt-8">
+          <SocialMedia />
+        </div>
       </div>
     </div>
   );

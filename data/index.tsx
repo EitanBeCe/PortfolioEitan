@@ -267,16 +267,16 @@ export const workExperience = [
 export const socialMedia = [
   {
     id: 1,
+    img: "/link.svg",
+    link: "https://www.linkedin.com/in/eitan-elberg/",
+  },
+  {
+    id: 2,
     img: "/git.svg",
     link: "https://github.com/EitanBeCe",
   },
   // {
-  //   id: 2,
+  //   id: 3,
   //   img: "/twit.svg",
   // },
-  {
-    id: 3,
-    img: "/link.svg",
-    link: "https://www.linkedin.com/in/eitan-elberg/",
-  },
 ];

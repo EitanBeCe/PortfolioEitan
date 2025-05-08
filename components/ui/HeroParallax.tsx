@@ -113,6 +113,7 @@ export const HeroParallax = ({
       className="h-[200vh] md:h-[360vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:400px] md:[perspective:800px] [transform-style:preserve-3d]"
     >
       <HeroTexts />
+
       <motion.div
         style={{
           rotateX,
