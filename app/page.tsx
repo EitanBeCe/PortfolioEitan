@@ -12,6 +12,7 @@ import { MacbookScreen } from "../components/MacbookScreen.tsx";
 import MyPhoto from "../components/MyPhoto.tsx";
 import { LampFooter } from "../components/ui/Lamp.tsx";
 import NumbersSection from "../components/NumbersSection.tsx";
+import MyStack from "../components/MyStack.tsx";
 
 export default function Home() {
   return (
@@ -20,19 +21,19 @@ export default function Home() {
         <FloatingNav navItems={navItems} />
         {/* <Hero /> */}
 
-        {/* // FIXME: см скрин - годы опыта, кол-во проектов, кол-во коммитов на консюмрз и гитхабе  */}
         {/* // FIXME: stack наверху (МБ СТАК кружочками). добавить фигму гит */}
-        {/* // FIXME: см секцию работы тут https://natsha.me/ */}
         {/* // FIXME: см ссылки на скиллы тут https://sugith.in/ (мб увеличивать круги при хавере и давать ссылку) */}
         {/* // FIXME: https://sugith.in/ ссылки на гит каждого проекта. Лого можно тут взять мб */}
-        {/* // FIXME: ридми пример тут https://github.com/sugith10 - добавить консюмрз туда */}
-        {/* // FIXME: чек простоту текстов. swift везде в конец */}
+        {/* // FIXME: ридми пример тут https://github.com/sugith10 - добавить консюмрз туда. Портфолио. Циферки опыта */}
 
+        {/* // FIXME: чек простоту текстов. swift везде в конец */}
         {/* // FIXME:  мб поменять хиро текст на GPT */}
+        {/* I enjoy Building pixel-perfect Interactive apps */}
         <Hero_v2 />
         <NumbersSection />
         <AnimatedLines />
         <MyPhoto />
+        <MyStack />
         <Grid />
         <RecentProjects />
         <Experience />

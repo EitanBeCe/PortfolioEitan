@@ -1,13 +1,16 @@
 import React from "react";
 import { myNumbers } from "../data/index.tsx";
+import { LazyAmimated } from "./LazyLoad.tsx";
 
 const NumbersSection = () => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 gap-y-16 justify-items-center px-8 pb-96">
-      {myNumbers.map((item) => (
-        <NumbersItem key={item.title} item={item} />
-      ))}
-    </div>
+    <LazyAmimated rootMargin="0px 0px -20px 0px" className="min-h-96">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 gap-y-16 justify-items-center px-8 pb-96">
+        {myNumbers.map((item) => (
+          <NumbersItem key={item.title} item={item} />
+        ))}
+      </div>
+    </LazyAmimated>
   );
 };
 

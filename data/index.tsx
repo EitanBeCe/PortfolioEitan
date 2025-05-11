@@ -145,20 +145,20 @@ export const myNumbers = [
     title: "Projects\nCompleted",
   },
   {
-    number: "1000+",
-    title: "Commits\non Gitlab",
-  },
-  {
-    number: "100+",
-    title: "Commits\non Github",
+    number: "4",
+    title: "Spoken\nLanguages",
   },
   {
     number: "2000+",
-    title: "Happy Clients\non Consumrz.com",
+    title: "Commits\non Gitlab",
   },
   {
-    number: "4",
-    title: "Spoken\nLanguages",
+    number: "500+",
+    title: "Commits\non Github",
+  },
+  {
+    number: "3000+",
+    title: "Happy Clients\non Consumrz.com",
   },
 ];
 

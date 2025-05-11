@@ -146,7 +146,7 @@ export const HeroParallax = ({
             opacity: isRotationFinished ? 1 : 0,
             scale: isRotationFinished ? 1 : 0.8,
           }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
           className="pb-16 -mt-16"
         >
           <h1 className="heading">
