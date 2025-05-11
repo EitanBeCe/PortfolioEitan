@@ -28,7 +28,7 @@ const cardVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.8,
+      duration: 0.4,
       ease: "easeOut",
     },
   },
@@ -72,8 +72,8 @@ export const HeroParallax = ({
     }
   }, []);
 
-  const springConfig = { stiffness: 300, damping: 30, bounce: 100 };
-  // const springConfig = { stiffness: 200, damping: 30, bounce: 100 };
+  // const springConfig = { stiffness: 300, damping: 30, bounce: 100 };
+  const springConfig = { stiffness: 160, damping: 30, bounce: 100 };
 
   const translateX = useSpring(
     useTransform(scrollYProgress, [0, 1], [0, 1000]),
@@ -101,14 +101,22 @@ export const HeroParallax = ({
     useTransform(scrollYProgress, [0, 0.2], range),
     springConfig
   );
-  // const translateY = useSpring(
-  //   useTransform(
-  //     scrollYProgress,
-  //     [0, 0.2],
-  //     window.innerWidth > 768 ? [-700, 500] : [-100, 100]
-  //   ),
-  //   springConfig
-  // );
+
+  // const triggered = useRef(false);
+  const [isRotationFinished, setIsRotationFinished] = useState(false);
+
+  useEffect(() => {
+    const unsubscribe = rotateX.on("change", (value) => {
+      // if (!triggered.current && Math.abs(value) < 0.2) {
+      if (Math.abs(value) < 1) {
+        setIsRotationFinished(true);
+      } else {
+        setIsRotationFinished(false);
+      }
+    });
+
+    return () => unsubscribe();
+  }, [rotateX]);
 
   return (
     <div
@@ -128,6 +136,26 @@ export const HeroParallax = ({
         className="max-md:mt-32"
         // Edited motion.divs space and mb
       >
+        {/* <p className={`${isRotationFinished ? "opacity-1" : "opacity-0"}`}>
+          lalal
+        </p> */}
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{
+            opacity: isRotationFinished ? 1 : 0,
+            scale: isRotationFinished ? 1 : 0.8,
+          }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="pb-16 -mt-16"
+        >
+          <h1 className="heading">
+            Projects
+            {/* Some of m{" "} */}
+            {/* <span className="text-purple">Projects</span> */}
+          </h1>
+        </motion.div>
+
         <motion.div
           className="flex flex-row-reverse space-x-reverse space-x-[5vw] mb-[5vw]"
           variants={rowVariants}
