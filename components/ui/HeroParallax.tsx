@@ -72,8 +72,8 @@ export const HeroParallax = ({
     }
   }, []);
 
-  // const springConfig = { stiffness: 300, damping: 30, bounce: 100 };
-  const springConfig = { stiffness: 200, damping: 30, bounce: 100 };
+  const springConfig = { stiffness: 300, damping: 30, bounce: 100 };
+  // const springConfig = { stiffness: 200, damping: 30, bounce: 100 };
 
   const translateX = useSpring(
     useTransform(scrollYProgress, [0, 1], [0, 1000]),
@@ -97,7 +97,10 @@ export const HeroParallax = ({
   );
 
   // Edited
-  const translateY = useSpring(useTransform(scrollYProgress, [0, 0.2], range));
+  const translateY = useSpring(
+    useTransform(scrollYProgress, [0, 0.2], range),
+    springConfig
+  );
   // const translateY = useSpring(
   //   useTransform(
   //     scrollYProgress,
@@ -120,6 +123,7 @@ export const HeroParallax = ({
           rotateZ,
           translateY,
           opacity,
+          // willChange: "transform, opacity",
         }}
         className="max-md:mt-32"
         // Edited motion.divs space and mb
