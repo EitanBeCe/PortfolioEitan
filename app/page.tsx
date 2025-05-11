@@ -11,6 +11,7 @@ import Footer from "../components/Footer.tsx";
 import { MacbookScreen } from "../components/MacbookScreen.tsx";
 import MyPhoto from "../components/MyPhoto.tsx";
 import { LampFooter } from "../components/ui/Lamp.tsx";
+import NumbersSection from "../components/NumbersSection.tsx";
 
 export default function Home() {
   return (
@@ -28,8 +29,8 @@ export default function Home() {
         {/* // FIXME: чек простоту текстов. swift везде в конец */}
 
         {/* // FIXME:  мб поменять хиро текст на GPT */}
-        {/* // FIXME:  ниже в скролле хиро появляющуюся надпись "projects" */}
         <Hero_v2 />
+        <NumbersSection />
         <AnimatedLines />
         <MyPhoto />
         <Grid />

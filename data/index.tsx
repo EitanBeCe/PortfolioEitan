@@ -122,6 +122,46 @@ export const myProjects = [
   // },
 ];
 
+const getYearsOfExperience = () => {
+  const start = new Date(2022, 0); // jan 2022
+  const now = new Date();
+
+  const diffInMonths =
+    (now.getFullYear() - start.getFullYear()) * 12 +
+    now.getMonth() -
+    start.getMonth();
+  const years = diffInMonths / 12;
+
+  return years % 1 === 0 ? `${years}+` : `${Math.floor(years)}.5+`;
+};
+
+export const myNumbers = [
+  {
+    number: getYearsOfExperience(),
+    title: "Years of\nExperience",
+  },
+  {
+    number: "30+",
+    title: "Projects\nCompleted",
+  },
+  {
+    number: "1000+",
+    title: "Commits\non Gitlab",
+  },
+  {
+    number: "100+",
+    title: "Commits\non Github",
+  },
+  {
+    number: "2000+",
+    title: "Happy Clients\non Consumrz.com",
+  },
+  {
+    number: "4",
+    title: "Spoken\nLanguages",
+  },
+];
+
 // type navItems = {
 //   name: string;
 //   link: string;
