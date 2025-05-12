@@ -16,7 +16,7 @@ const NumbersAndSkills = () => {
 
   return (
     <LazyAmimated rootMargin="0px 0px -20px 0px" className="min-h-96 pb-96">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 gap-y-16 justify-items-center px-8 pb-24">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center px-8 pb-24 pt-2">
         {myNumbers.map((item) => (
           <NumbersItem key={item.title} item={item} />
         ))}

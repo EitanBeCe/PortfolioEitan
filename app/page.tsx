@@ -20,9 +20,7 @@ export default function Home() {
         <FloatingNav navItems={navItems} />
         {/* <Hero /> */}
 
-        {/* // FIXME: stack наверху (МБ СТАК кружочками). добавить фигму гит */}
-        {/* // FIXME: Скилл секция https://www.oskarfranttiglen.com/ */}
-        {/* // FIXME: джаву добавить */}
+        {/* // FIXME: См подробность опыта работы тут https://www.oskarfranttiglen.com/ */}
         {/* // FIXME: ссыль на резюме */}
         {/* // FIXME: секция список курсов */}
         {/* // FIXME: см ссылки на скиллы тут https://sugith.in/ (мб увеличивать круги при хавере и давать ссылку) */}

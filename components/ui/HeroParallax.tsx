@@ -121,7 +121,7 @@ export const HeroParallax = ({
   return (
     <div
       ref={ref}
-      className="h-[200vh] md:h-[360vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:400px] md:[perspective:800px] [transform-style:preserve-3d]"
+      className="h-[200vh] md:h-[360vh] py-20 sm:py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:400px] md:[perspective:800px] [transform-style:preserve-3d]"
     >
       <HeroTexts />
 

@@ -12,7 +12,7 @@ export function LampHero() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, ease: "easeOut" }}
       >
-        <LampContainer className="absolute left-1/2 -translate-x-1/2 top-64 -translate-y-1/2 max-sm:top-52" />
+        <LampContainer className="absolute left-1/2 -translate-x-1/2 max-sm:top-32 top-64 -translate-y-1/2" />
       </motion.div>
     </LazyLoad>
   );

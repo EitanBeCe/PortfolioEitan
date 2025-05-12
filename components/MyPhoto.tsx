@@ -10,7 +10,7 @@ const MyPhoto = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      setRotation(scrollY * 0.2);
+      setRotation(scrollY * 0.24);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -24,7 +24,6 @@ const MyPhoto = () => {
       sm:w-[80vw] sm:h-[80vw] 
       md:w-[70vw] md:h-[70vw] 
       lg:w-[90vh] lg:h-[90vh]
-      xl:w-[90vh] xl:h-[90vh]
       mt-12 lg:mt-24 
       rounded-full mx-auto overflow-hidden flex items-center justify-center"
     >

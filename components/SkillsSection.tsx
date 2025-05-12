@@ -6,7 +6,7 @@ import { mySkills } from "../data/index.tsx";
 
 const SkillsSection = () => {
   return (
-    <div className="flex flex-wrap gap-4 justify-center px-8">
+    <div className="flex flex-wrap gap-2 justify-center px-1">
       {mySkills.map((skill, i) => (
         <ButtonPurple key={i} icon={skill.icon} text={skill.title} />
       ))}
