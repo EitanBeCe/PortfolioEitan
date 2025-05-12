@@ -162,11 +162,156 @@ export const myNumbers = [
   },
 ];
 
+// export const mySkills = [
+//   {
+//     title: "React.js",
+//     icon: "/re.svg",
+//     appear: [0.05, 0.1],
+//     x: "0%",
+//     y: "35%",
+//   },
+//   {
+//     title: "Next.js",
+//     icon: "/next.svg",
+//     appear: [0.1, 0.15],
+//     x: "0%",
+//     y: "43%",
+//   },
+//   {
+//     title: "JavaScript",
+//     icon: "/js.svg",
+//     appear: [0.15, 0.2],
+//     x: "0%",
+//     y: "51vh",
+//   },
+//   {
+//     title: "TypeScript",
+//     icon: "/ts.svg",
+//     appear: [0.2, 0.25],
+//     x: "0%",
+//     y: "59%",
+//   },
+//   {
+//     title: "Tailwind",
+//     icon: "/tail.svg",
+//     appear: [0.25, 0.3],
+//     x: "0%",
+//     y: "67%",
+//   },
+//   {
+//     title: "Three.js",
+//     icon: "/three.svg",
+//     appear: [0.3, 0.35],
+//     x: "86.3%",
+//     y: "35%",
+//   },
+//   {
+//     title: "GSAP",
+//     icon: "/gsap.svg",
+//     appear: [0.35, 0.4],
+//     x: "86.3%",
+//     y: "43%",
+//   },
+//   {
+//     title: "SwiftUI",
+//     icon: "/swiftUI.svg",
+//     appear: [0.4, 0.45],
+//     x: "86.3%",
+//     y: "51%",
+//   },
+//   {
+//     title: "Java",
+//     icon: "/java.svg",
+//     appear: [0.45, 0.5],
+//     x: "86.3%",
+//     y: "59%",
+//   },
+//   {
+//     title: "NovaUI",
+//     // icon: "/nova.svg",
+//     appear: [0.5, 0.55],
+//     x: "86.3%",
+//     y: "67%",
+//   },
+// ];
+
 // type navItems = {
 //   name: string;
 //   link: string;
-//   icon?: JSX.Element;
+//   icon?:
 // }[];
+
+export const mySkills = [
+  {
+    title: "React.js",
+    icon: "/re.svg",
+    appear: [0.05, 0.1],
+    x: "6%",
+    y: "18%",
+  },
+  {
+    title: "Next.js",
+    icon: "/next.svg",
+    appear: [0.1, 0.15],
+    x: "60%",
+    y: "30%",
+  },
+  {
+    title: "JavaScript",
+    icon: "/js.svg",
+    appear: [0.15, 0.2],
+    x: "42%",
+    y: "38%",
+  },
+  {
+    title: "TypeScript",
+    icon: "/ts.svg",
+    appear: [0.2, 0.25],
+    x: "26%",
+    y: "30%",
+  },
+  {
+    title: "TailwindCSS",
+    icon: "/tail.svg",
+    appear: [0.25, 0.3],
+    x: "10%",
+    y: "80%",
+  },
+  {
+    title: "Three.js",
+    icon: "/three.svg",
+    appear: [0.3, 0.35],
+    x: "74%",
+    y: "14%",
+  },
+  {
+    title: "GSAP",
+    icon: "/gsap.svg",
+    appear: [0.35, 0.4],
+    x: "26%",
+    y: "66%",
+  },
+  {
+    title: "SwiftUI",
+    icon: "/swiftUI.svg",
+    appear: [0.4, 0.45],
+    x: "72%",
+    y: "84%",
+  },
+  {
+    title: "Java",
+    icon: "/java.svg",
+    appear: [0.45, 0.5],
+    x: "50%",
+    y: "64%",
+  },
+  {
+    title: "NovaUI",
+    appear: [0.5, 0.55],
+    x: "40%",
+    y: "90%",
+  },
+];
 
 export const navItems = [
   { name: "About", link: "#about" },

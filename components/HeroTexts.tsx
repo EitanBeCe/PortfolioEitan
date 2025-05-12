@@ -24,7 +24,7 @@ export const HeroTexts = () => {
         </motion.div>
 
         <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-          Hi, I&apos;m Eitan, a React developer based in Israel
+          Hi, I&apos;m Eitan, a React Frontend developer based in Israel
         </p>
 
         <a href="#about">

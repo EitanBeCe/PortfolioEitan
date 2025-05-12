@@ -1,11 +1,19 @@
 "use client";
+
 import { cn } from "@/lib/utils";
-// import { p, div, svg, filter } from "framer-motion/client";
-import { motion, MotionValue, useScroll, useTransform } from "motion/react";
-// import path from "path";
+import {
+  motion,
+  MotionValue,
+  useScroll,
+  useSpring,
+  useTransform,
+} from "motion/react";
 import React, { useEffect, useState } from "react";
 import { TextRevealCard } from "./TextRevealCard.tsx";
 import { LazyAmimated } from "../LazyLoad.tsx";
+import { ButtonPurple } from "./ButtonPurple.tsx";
+import { mySkills } from "../../data/index.tsx";
+// import { AnimatedSkills } from "../AnimatedSkills.tsx";
 
 export function AnimatedLines() {
   const ref = React.useRef(null);
@@ -20,6 +28,32 @@ export function AnimatedLines() {
   const pathLengthThird = useTransform(scrollYProgress, [0, 0.8], [0.1, 1.2]);
   const pathLengthFourth = useTransform(scrollYProgress, [0, 0.8], [0.05, 1.2]);
   const pathLengthFifth = useTransform(scrollYProgress, [0, 0.8], [0, 1.2]);
+
+  const opacities = [
+    useTransform(scrollYProgress, mySkills[0].appear, [0, 1]),
+    useTransform(scrollYProgress, mySkills[1].appear, [0, 1]),
+    useTransform(scrollYProgress, mySkills[2].appear, [0, 1]),
+    useTransform(scrollYProgress, mySkills[3].appear, [0, 1]),
+    useTransform(scrollYProgress, mySkills[4].appear, [0, 1]),
+    useTransform(scrollYProgress, mySkills[5].appear, [0, 1]),
+    useTransform(scrollYProgress, mySkills[6].appear, [0, 1]),
+    useTransform(scrollYProgress, mySkills[7].appear, [0, 1]),
+    useTransform(scrollYProgress, mySkills[8].appear, [0, 1]),
+    useTransform(scrollYProgress, mySkills[9].appear, [0, 1]),
+  ];
+
+  const scales = [
+    useTransform(scrollYProgress, mySkills[0].appear, [0.8, 1]),
+    useTransform(scrollYProgress, mySkills[1].appear, [0.8, 1]),
+    useTransform(scrollYProgress, mySkills[2].appear, [0.8, 1]),
+    useTransform(scrollYProgress, mySkills[3].appear, [0.8, 1]),
+    useTransform(scrollYProgress, mySkills[4].appear, [0.8, 1]),
+    useTransform(scrollYProgress, mySkills[5].appear, [0.8, 1]),
+    useTransform(scrollYProgress, mySkills[6].appear, [0.8, 1]),
+    useTransform(scrollYProgress, mySkills[7].appear, [0.8, 1]),
+    useTransform(scrollYProgress, mySkills[8].appear, [0.8, 1]),
+    useTransform(scrollYProgress, mySkills[9].appear, [0.8, 1]),
+  ];
 
   return (
     <div
@@ -36,6 +70,29 @@ export function AnimatedLines() {
           pathLengthFifth,
         ]}
       />
+
+      {/* <AnimatedSkills /> */}
+      {/* sticky top-[30%] sm:top-[20%] md:top-[14%] */}
+      <div className="sticky top-0 h-screen w-full pointer-events-none">
+        {mySkills.map((skill, index) => (
+          <motion.div
+            key={index}
+            style={{
+              position: "absolute",
+              top: skill.y,
+              left: skill.x,
+              opacity: opacities[index],
+              scale: scales[index],
+            }}
+          >
+            <ButtonPurple
+              icon={skill.icon}
+              text={skill.title}
+              isFixedSize={true}
+            />
+          </motion.div>
+        ))}
+      </div>
     </div>
   );
 }
@@ -208,8 +265,10 @@ const GoogleGeminiEffect = ({
       {!isMobile && (
         <LazyAmimated rootMargin="0px 0px -40% 0px">
           <TextRevealCard
-            text="To what you've missed"
-            revealText="Projects worth seeing"
+            // text="To what you've missed"
+            // revealText="Projects worth seeing"
+            text="To the important things"
+            revealText="That actually matters"
             // className="absolute top-96 left-1/2 -translate-x-1/3 w-[36rem]"
             // className="left-[34vw] w-[50vw] top-[40vh]"
             className="mx-auto translate-x-[8vw] sm:translate-x-[8vw] w-[60vw] sm:w-[50vw] top-[20vh] sm:top-[40vh]"
@@ -220,5 +279,3 @@ const GoogleGeminiEffect = ({
     </div>
   );
 };
-
-// export default AnimatedLines;

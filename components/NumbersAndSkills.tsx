@@ -1,15 +1,28 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import { myNumbers } from "../data/index.tsx";
 import { LazyAmimated } from "./LazyLoad.tsx";
+import SkillsSection from "./SkillsSection.tsx";
 
-const NumbersSection = () => {
+const NumbersAndSkills = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    if (window && window.innerWidth < 768) {
+      setIsMobile(true);
+    }
+  }, []);
+
   return (
-    <LazyAmimated rootMargin="0px 0px -20px 0px" className="min-h-96">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 gap-y-16 justify-items-center px-8 pb-96">
+    <LazyAmimated rootMargin="0px 0px -20px 0px" className="min-h-96 pb-96">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 gap-y-16 justify-items-center px-8 pb-24">
         {myNumbers.map((item) => (
           <NumbersItem key={item.title} item={item} />
         ))}
       </div>
+
+      {isMobile && <SkillsSection />}
     </LazyAmimated>
   );
 };
@@ -31,4 +44,4 @@ const NumbersItem = ({ item }: { item: { title: string; number: string } }) => {
   );
 };
 
-export default NumbersSection;
+export default NumbersAndSkills;
