@@ -4,13 +4,13 @@ import { FaLocationArrow } from "react-icons/fa6";
 
 import { myProjects } from "@/data";
 import { PinContainer } from "./ui/3d-pin";
-import { LazyAmimated } from "./LazyLoad.tsx";
+import { LazyAnimated } from "./LazyLoad.tsx";
 import Image from "next/image";
 
 const RecentProjects = () => {
   return (
     <section id="projects" className="py-20">
-      <LazyAmimated rootMargin="0px 0px -10px 0px">
+      <LazyAnimated rootMargin="0px 0px -10px 0px">
         <h1 className="heading">
           A small selection of{" "}
           <span className="text-purple">recent projects</span>
@@ -102,7 +102,7 @@ const RecentProjects = () => {
               </div>
             ))}
         </div>
-      </LazyAmimated>
+      </LazyAnimated>
     </section>
   );
 };

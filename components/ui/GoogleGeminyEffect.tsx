@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { motion, MotionValue, useScroll, useTransform } from "motion/react";
 import React, { useEffect, useState } from "react";
 import { TextRevealCard } from "./TextRevealCard.tsx";
-import { LazyAmimated } from "../LazyLoad.tsx";
+import { LazyAnimated } from "../LazyLoad.tsx";
 import { ButtonPurple } from "./ButtonPurple.tsx";
 import { mySkills } from "../../data/index.tsx";
 
@@ -265,7 +265,7 @@ const GoogleGeminiEffect = ({
         </defs>
       </svg>
       {!isMobile && (
-        <LazyAmimated rootMargin="0px 0px -40% 0px">
+        <LazyAnimated rootMargin="0px 0px -40% 0px">
           <TextRevealCard
             // text="To what you've missed"
             // revealText="Projects worth seeing"
@@ -275,7 +275,7 @@ const GoogleGeminiEffect = ({
             // className="left-[34vw] w-[50vw] top-[40vh]"
             className="mx-auto translate-x-[8vw] sm:translate-x-[8vw] w-[60vw] sm:w-[50vw] top-[20vh] sm:top-[40vh]"
           />
-        </LazyAmimated>
+        </LazyAnimated>
       )}
       {isMobile && <div className="h-52" />}
     </div>

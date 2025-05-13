@@ -19,19 +19,19 @@ export const LazyLoad = ({ children, delay = 1000 }: LazyLoadProps) => {
   return mounted ? <>{children}</> : null;
 };
 
-type LazyAmimatedProps = {
+type LazyAnimatedProps = {
   children: React.ReactNode;
   className?: string;
   motionProps?: MotionProps;
   rootMargin?: string;
 };
 
-export const LazyAmimated = ({
+export const LazyAnimated = ({
   children,
   className,
   motionProps = {},
   rootMargin = "0px",
-}: LazyAmimatedProps) => {
+}: LazyAnimatedProps) => {
   const [visible, setVisible] = useState(false);
   const ref = useRef<HTMLDivElement | null>(null);
 

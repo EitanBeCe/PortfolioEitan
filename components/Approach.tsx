@@ -3,12 +3,12 @@
 import React from "react";
 import { CanvasRevealEffect } from "./ui/CanvasRevealEffect";
 import { AnimatePresence, motion } from "motion/react";
-import { LazyAmimated } from "./LazyLoad.tsx";
+import { LazyAnimated } from "./LazyLoad.tsx";
 
 const Approach = () => {
   return (
     <section className="w-full py-20 px-8">
-      <LazyAmimated rootMargin="0px 0px -40px 0px">
+      <LazyAnimated rootMargin="0px 0px -40px 0px">
         <h1 className="heading">
           My <span className="text-purple">approach</span>
         </h1>
@@ -57,7 +57,7 @@ const Approach = () => {
             />
           </Card>
         </div>
-      </LazyAmimated>
+      </LazyAnimated>
     </section>
   );
 };

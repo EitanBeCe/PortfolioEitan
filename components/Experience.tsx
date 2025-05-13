@@ -2,12 +2,12 @@ import React from "react";
 
 import { workExperience } from "@/data";
 import { Button } from "./ui/MovingBorders.tsx";
-import { LazyAmimated } from "./LazyLoad.tsx";
+import { LazyAnimated } from "./LazyLoad.tsx";
 
 const Experience = () => {
   return (
     <section className="px-8 py-20" id="experience">
-      <LazyAmimated rootMargin="0px 0px -20px 0px">
+      <LazyAnimated rootMargin="0px 0px -20px 0px">
         <h1 className="heading">
           My <span className="text-purple">work experience</span>
         </h1>
@@ -44,7 +44,7 @@ const Experience = () => {
             </Button>
           ))}
         </div>
-      </LazyAmimated>
+      </LazyAnimated>
     </section>
   );
 };

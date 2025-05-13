@@ -6,7 +6,7 @@ import MagicButton from "./MagicButton.tsx";
 import { useEffect, useState } from "react";
 import animationData from "@/data/confetti.json";
 import dynamic from "next/dynamic";
-import { LazyAmimated } from "../LazyLoad.tsx";
+import { LazyAnimated } from "../LazyLoad.tsx";
 import { AnimatedGlobe } from "../AnimatedGlobe.tsx";
 
 const BackgroundGradientAnimation = dynamic(
@@ -198,7 +198,7 @@ export const BentoGridItem = ({
             <div className="mt-5 relative">
               {copied && !animationFinished && (
                 <div className="absolute -bottom-5 right-0">
-                  <LazyAmimated rootMargin="200px">
+                  <LazyAnimated rootMargin="200px">
                     <Lottie
                       animationData={animationData}
                       loop={false}
@@ -206,7 +206,7 @@ export const BentoGridItem = ({
                       onComplete={() => setAnimationFinished(true)}
                       style={{ height: 200, width: 400 }}
                     />
-                  </LazyAmimated>
+                  </LazyAnimated>
                 </div>
               )}
 
