@@ -7,6 +7,7 @@ export const myProjects = [
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
     link: "https://astounding-entremet-533284.netlify.app/",
     isTop: true,
+    githubLink: "https://github.com/EitanBeCe/AppleWebsiteReact",
   },
   {
     title: "Consumrz.com",
@@ -23,6 +24,7 @@ export const myProjects = [
     iconLists: ["/ts.svg", "/tail.svg", "/three.svg", "/gsap.svg"],
     link: "https://brainwaive.netlify.app/",
     isTop: true,
+    githubLink: "https://github.com/EitanBeCe/Brainwave",
   },
   {
     title: "Employees list - Redux and React",
@@ -30,6 +32,7 @@ export const myProjects = [
     img: "/assets/projectThumbnails/employee.webp",
     des: "The user can add/remove employees, set them 'for raise' with a star and add them a bonus. One can filter employees in different ways and search them. Written on React using Class components.",
     iconLists: ["/re.svg"],
+    githubLink: "https://github.com/EitanBeCe/EmployeesListReact",
   },
   {
     title: "Social network - React + TS",
@@ -38,6 +41,7 @@ export const myProjects = [
     des: "Made in 3 days. Login, add/edit/delete posts, likes. Theme changer",
     iconLists: ["/re.svg"],
     isTop: true,
+    githubLink: "https://github.com/EitanBeCe/social-network",
   },
   {
     title: "Expenses tracker - React",
@@ -46,6 +50,7 @@ export const myProjects = [
     des: "Nice side project created for adding and tracking your expenses. Beautifully and dynamically displays your expenses during the months of the year.",
     iconLists: ["/re.svg"],
     isTop: true,
+    githubLink: "https://github.com/EitanBeCe/ExpensesTrackerApp",
   },
   {
     title: "My first Portfolio",
@@ -54,6 +59,7 @@ export const myProjects = [
     des: "The beginning of my journey in 2022",
     iconLists: ["/ts.svg"],
     isTop: true,
+    githubLink: "https://github.com/EitanBeCe/Portfolio",
   },
   {
     // Duplicate for Hero

@@ -19,7 +19,7 @@ const RecentProjects = () => {
         <div className="flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-8 mt-10">
           {myProjects
             .filter((p) => p.isTop)
-            .map(({ title, des, iconLists, img, link }, index) => (
+            .map(({ title, des, iconLists, img, link, githubLink }, index) => (
               <div
                 className="flex items-center justify-center sm:h-[36rem] h-[32rem] lg:min-h-[32.5rem] sm:w-[570px] w-[80vw]"
                 key={index}
@@ -48,18 +48,6 @@ const RecentProjects = () => {
                           : "-bottom-[34%] h-[120%] max-sm:h-[110%] rounded-t-xl rotate-3"
                       }`}
                     />
-
-                    {/* <Image
-                      src={img}
-                      alt="cover"
-                      width={302}
-                      height={450}
-                      className={`z-10 absolute ${
-                        title.includes("iPhone")
-                          ? "bottom-0"
-                          : "-bottom-[34%] h-[120%] max-sm:h-[110%] rounded-t-xl rotate-3"
-                      } object-contain`}
-                    /> */}
                   </div>
 
                   <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
@@ -92,6 +80,18 @@ const RecentProjects = () => {
                     </div>
 
                     <div className="flex justify-center items-center">
+                      {githubLink && (
+                        <a
+                          href={githubLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <div className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center mr-6">
+                            <img src="/git.svg" alt="git" className="p-2" />
+                          </div>
+                        </a>
+                      )}
+
                       <p className="flex lg:text-xl md:text-xs text-sm text-purple">
                         Check Live Site
                       </p>
