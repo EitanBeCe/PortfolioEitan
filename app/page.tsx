@@ -28,6 +28,7 @@ export default function Home() {
         {/* // FIXME:  мб поменять хиро текст на GPT */}
         {/* I enjoy Building pixel-perfect Interactive apps */}
         {/* I am not passionate 🤢/ ... /ordinar 🤐/linkedin /copypaster 📋 - смена слова */}
+        {/* // FIXME:  мб переделать вторую консюм картику */}
         <Hero_v2 />
         {/* // FIXME:  анимировать */}
         <NumbersAndSkills />

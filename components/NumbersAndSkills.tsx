@@ -10,14 +10,15 @@ const NumbersAndSkills = () => {
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start start", "end start"],
+    offset: ["100% 100%", "end start"],
+    // offset: ["start start", "end start"],
     // offset: ["50% 100%", "100% 50%"],
   });
 
   // const animateTransform = useTransform(scrollYProgress, [1, 0.4], [0.1, 1.2]);
-  const opacity = useTransform(scrollYProgress, [0, 0.4], [1, 0.2]);
+  const opacity = useTransform(scrollYProgress, [0, 0.4], [1, 0]);
   const scale = useTransform(scrollYProgress, [0, 0.4], [1, 0.8]);
-  const y = useTransform(scrollYProgress, [0, 0.4], [0, 120]);
+  const y = useTransform(scrollYProgress, [0, 0.4], [0, 200]);
 
   const [isMobile, setIsMobile] = useState(false);
 
