@@ -31,29 +31,29 @@ export function AnimatedLines() {
   const pathLengthFifth = useTransform(scrollYProgress, [0, 0.8], [0, 1.2]);
 
   const opacities = [
-    useTransform(scrollYProgress, mySkills[0].appear, [0, 1]),
-    useTransform(scrollYProgress, mySkills[1].appear, [0, 1]),
-    useTransform(scrollYProgress, mySkills[2].appear, [0, 1]),
-    useTransform(scrollYProgress, mySkills[3].appear, [0, 1]),
-    useTransform(scrollYProgress, mySkills[4].appear, [0, 1]),
-    useTransform(scrollYProgress, mySkills[5].appear, [0, 1]),
-    useTransform(scrollYProgress, mySkills[6].appear, [0, 1]),
-    useTransform(scrollYProgress, mySkills[7].appear, [0, 1]),
-    useTransform(scrollYProgress, mySkills[8].appear, [0, 1]),
-    useTransform(scrollYProgress, mySkills[9].appear, [0, 1]),
+    useTransform(scrollYProgress, mySkills[0].appear, [0, 1, 0]),
+    useTransform(scrollYProgress, mySkills[1].appear, [0, 1, 0]),
+    useTransform(scrollYProgress, mySkills[2].appear, [0, 1, 0]),
+    useTransform(scrollYProgress, mySkills[3].appear, [0, 1, 0]),
+    useTransform(scrollYProgress, mySkills[4].appear, [0, 1, 0]),
+    useTransform(scrollYProgress, mySkills[5].appear, [0, 1, 0]),
+    useTransform(scrollYProgress, mySkills[6].appear, [0, 1, 0]),
+    useTransform(scrollYProgress, mySkills[7].appear, [0, 1, 0]),
+    useTransform(scrollYProgress, mySkills[8].appear, [0, 1, 0]),
+    useTransform(scrollYProgress, mySkills[9].appear, [0, 1, 0]),
   ];
 
   const scales = [
-    useTransform(scrollYProgress, mySkills[0].appear, [0.8, 1]),
-    useTransform(scrollYProgress, mySkills[1].appear, [0.8, 1]),
-    useTransform(scrollYProgress, mySkills[2].appear, [0.8, 1]),
-    useTransform(scrollYProgress, mySkills[3].appear, [0.8, 1]),
-    useTransform(scrollYProgress, mySkills[4].appear, [0.8, 1]),
-    useTransform(scrollYProgress, mySkills[5].appear, [0.8, 1]),
-    useTransform(scrollYProgress, mySkills[6].appear, [0.8, 1]),
-    useTransform(scrollYProgress, mySkills[7].appear, [0.8, 1]),
-    useTransform(scrollYProgress, mySkills[8].appear, [0.8, 1]),
-    useTransform(scrollYProgress, mySkills[9].appear, [0.8, 1]),
+    useTransform(scrollYProgress, mySkills[0].appear, [0.8, 1, 1.2]),
+    useTransform(scrollYProgress, mySkills[1].appear, [0.8, 1, 1.2]),
+    useTransform(scrollYProgress, mySkills[2].appear, [0.8, 1, 1.2]),
+    useTransform(scrollYProgress, mySkills[3].appear, [0.8, 1, 1.2]),
+    useTransform(scrollYProgress, mySkills[4].appear, [0.8, 1, 1.2]),
+    useTransform(scrollYProgress, mySkills[5].appear, [0.8, 1, 1.2]),
+    useTransform(scrollYProgress, mySkills[6].appear, [0.8, 1, 1.2]),
+    useTransform(scrollYProgress, mySkills[7].appear, [0.8, 1, 1.2]),
+    useTransform(scrollYProgress, mySkills[8].appear, [0.8, 1, 1.2]),
+    useTransform(scrollYProgress, mySkills[9].appear, [0.8, 1, 1.2]),
   ];
 
   return (
@@ -74,7 +74,7 @@ export function AnimatedLines() {
 
       {/* <AnimatedSkills /> */}
       {!isMobile && (
-        <div className="sticky top-0 h-screen w-full pointer-events-none">
+        <div className="sticky top-0 h-screen w-full">
           {mySkills.map((skill, index) => (
             <motion.div
               key={index}
@@ -84,11 +84,18 @@ export function AnimatedLines() {
                 left: skill.x,
                 opacity: opacities[index],
                 scale: scales[index],
+                borderRadius: "50%",
               }}
+              whileHover={{
+                filter: "brightness(2)",
+                // boxShadow: "0px 0px 25px 8px rgba(138, 43, 226, 0.8)",
+              }}
+              transition={{ duration: 0.3 }}
             >
               <ButtonPurple
                 icon={skill.icon}
                 text={skill.title}
+                link={skill.link}
                 // isFixedSize={true}
               />
             </motion.div>
@@ -134,11 +141,6 @@ const GoogleGeminiEffect = ({
       <p className="text-base md:text-xl font-normal text-center text-neutral-400 mt-4 max-w-lg mx-auto">
         {description || `And take a closer look`}
       </p>
-      {/* <div className="w-full h-[890px] -top-60 md:-top-40  flex items-center justify-center bg-red-transparent absolute ">
-        <button className="font-bold bg-white rounded-full md:px-4 md:py-2 px-2 py-1 md:mt-24 mt-8 z-30 md:text-base text-black text-xs  w-fit mx-auto ">
-          Just scroll it
-        </button>
-      </div> */}
       <svg
         width="1440"
         height="890"

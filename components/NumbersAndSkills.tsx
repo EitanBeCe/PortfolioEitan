@@ -18,7 +18,7 @@ const NumbersAndSkills = () => {
   // const animateTransform = useTransform(scrollYProgress, [1, 0.4], [0.1, 1.2]);
   const opacity = useTransform(scrollYProgress, [0, 0.4], [1, 0]);
   const scale = useTransform(scrollYProgress, [0, 0.4], [1, 0.8]);
-  const y = useTransform(scrollYProgress, [0, 0.4], [0, 200]);
+  const y = useTransform(scrollYProgress, [0, 0.4], [0, 140]);
 
   const [isMobile, setIsMobile] = useState(false);
 

@@ -25,14 +25,14 @@ export default function Home() {
 
         {/* // FIXME: См подробность опыта работы тут https://www.oskarfranttiglen.com/ */}
         {/* // FIXME: чек простоту текстов. swift везде в конец */}
+        {/* // FIXME:  перечекать верхнее меню */}
         {/* // FIXME:  мб поменять хиро текст на GPT */}
         {/* I enjoy Building pixel-perfect Interactive apps */}
+        {/* Meet your next creative developer */}
         {/* I am not passionate 🤢/ ... /ordinar 🤐/linkedin /copypaster 📋 - смена слова */}
         {/* // FIXME:  мб переделать вторую консюм картику */}
         <Hero_v2 />
-        {/* // FIXME:  анимировать */}
         <NumbersAndSkills />
-        {/* // FIXME:  разлет скиллов внизу скролла или хотябы исчезновение */}
         <AnimatedLines />
         <MyPhoto />
         <Grid />
