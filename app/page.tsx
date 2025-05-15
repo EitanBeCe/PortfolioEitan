@@ -12,6 +12,7 @@ import { MacbookScreen } from "../components/MacbookScreen.tsx";
 import MyPhoto from "../components/MyPhoto.tsx";
 import { LampFooter } from "../components/ui/Lamp.tsx";
 import NumbersAndSkills from "../components/NumbersAndSkills.tsx";
+import TextFlip from "../components/TextFlip.tsx";
 
 export default function Home() {
   return (
@@ -23,20 +24,18 @@ export default function Home() {
         {/* // FIXME: ридми пример тут https://github.com/sugith10 - добавить консюмрз туда. Портфолио. Циферки опыта. Ссыль резюме */}
         {/* // FIXME: ссыль на резюме */}
 
-        {/* // FIXME: См подробность опыта работы тут https://www.oskarfranttiglen.com/ */}
-        {/* // FIXME: чек простоту текстов. swift везде в конец */}
         {/* // FIXME:  перечекать верхнее меню */}
 
         {/* // FIXME:  мб поменять хиро текст на GPT */}
         {/* I enjoy Building pixel-perfect Interactive apps */}
         {/* Meet your next creative developer */}
         {/* I am not passionate 🤢/ ... /ordinar 🤐/linkedin /copypaster 📋 - смена слова */}
-        {/* // FIXME:  мб переделать вторую консюм картику */}
         {/* // FIXME:  мб кнопку автоскролла вниз */}
         <Hero_v2 />
         <NumbersAndSkills />
         <AnimatedLines />
         <MyPhoto />
+        <TextFlip />
         <Grid />
         <RecentProjects />
         <Experience />

@@ -99,7 +99,7 @@ export const myProjects = [
     // Duplicate for Hero with other photo
     title: "Consumrz.com.",
     des: "Company I'm currently working in. Creating this amazing powerfull App for more than 3 years",
-    img: "/assets/projectThumbnails/consumrz3.webp",
+    img: "/assets/projectThumbnails/consumrz4.png",
     iconLists: ["/ts.svg"],
     link: "https://consumrz.com/",
   },
@@ -443,7 +443,7 @@ export const workExperience = [
   },
   {
     id: 2,
-    title: "Mobile App Dev - SwiftUI",
+    title: "Mobile App Dev",
     desc: "Designed and developed mobile app for iOS platforms using SwiftUI and NovaUI.",
     className: "md:col-span-2",
     thumbnail: "/exp2.svg",
