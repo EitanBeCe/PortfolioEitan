@@ -12,8 +12,7 @@ import { MacbookScreen } from "../components/MacbookScreen.tsx";
 import MyPhoto from "../components/MyPhoto.tsx";
 import { LampFooter } from "../components/ui/Lamp.tsx";
 import NumbersAndSkills from "../components/NumbersAndSkills.tsx";
-import TextFlip from "../components/TextFlip.tsx";
-import { LazyAnimated } from "../components/LazyLoad.tsx";
+import TextFlipAnimated from "../components/TextFlipAnimated.tsx";
 
 export default function Home() {
   return (
@@ -36,9 +35,7 @@ export default function Home() {
         <NumbersAndSkills />
         <AnimatedLines />
         <MyPhoto />
-        <LazyAnimated rootMargin="0px 0px -40% 0px" className="min-h-[320px]">
-          <TextFlip />
-        </LazyAnimated>
+        <TextFlipAnimated />
         <Grid />
         <RecentProjects />
         <Experience />
