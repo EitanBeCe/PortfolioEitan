@@ -39,7 +39,7 @@ export const myProjects = [
     link: "https://lighthearted-valkyrie-121c98.netlify.app/",
     img: "/assets/projectThumbnails/social-network2.webp",
     des: "Made in 3 days. Login, add/edit/delete posts, likes. Theme changer",
-    iconLists: ["/re.svg"],
+    iconLists: ["/re.svg", "/ts.svg"],
     isTop: true,
     githubLink: "https://github.com/EitanBeCe/social-network",
   },
@@ -251,7 +251,7 @@ export const mySkills = [
   {
     title: "React.js",
     icon: "/re.svg",
-    appear: [0.05, 0.1, 0.76],
+    appear: [0.07, 0.46, 0.76],
     x: "6%",
     y: "18%",
     link: "https://react.dev/",
@@ -259,7 +259,7 @@ export const mySkills = [
   {
     title: "Next.js",
     icon: "/next.svg",
-    appear: [0.1, 0.15, 0.76],
+    appear: [0.1, 0.47, 0.76],
     x: "60%",
     y: "30%",
     link: "https://nextjs.org/",
@@ -267,7 +267,7 @@ export const mySkills = [
   {
     title: "JavaScript",
     icon: "/js.svg",
-    appear: [0.15, 0.2, 0.76],
+    appear: [0.15, 0.48, 0.76],
     x: "42%",
     y: "38%",
     link: "https://www.typescriptlang.org/",
@@ -275,7 +275,7 @@ export const mySkills = [
   {
     title: "TypeScript",
     icon: "/ts.svg",
-    appear: [0.2, 0.25, 0.76],
+    appear: [0.2, 0.49, 0.76],
     x: "26%",
     y: "30%",
     link: "https://www.typescriptlang.org/",
@@ -283,7 +283,7 @@ export const mySkills = [
   {
     title: "TailwindCSS",
     icon: "/tail.svg",
-    appear: [0.25, 0.3, 0.76],
+    appear: [0.25, 0.5, 0.76],
     x: "10%",
     y: "80%",
     link: "https://tailwindcss.com/",
@@ -291,7 +291,7 @@ export const mySkills = [
   {
     title: "Three.js",
     icon: "/three.svg",
-    appear: [0.3, 0.35, 0.76],
+    appear: [0.3, 0.51, 0.76],
     x: "74%",
     y: "14%",
     link: "https://threejs.org/",
@@ -299,7 +299,7 @@ export const mySkills = [
   {
     title: "GSAP",
     icon: "/gsap.svg",
-    appear: [0.35, 0.4, 0.76],
+    appear: [0.35, 0.52, 0.76],
     x: "26%",
     y: "66%",
     link: "https://gsap.com",
@@ -307,7 +307,7 @@ export const mySkills = [
   {
     title: "SwiftUI",
     icon: "/swiftUI.svg",
-    appear: [0.4, 0.45, 0.76],
+    appear: [0.4, 0.53, 0.76],
     x: "72%",
     y: "84%",
     link: "https://developer.apple.com/xcode/swiftui/",
@@ -315,7 +315,7 @@ export const mySkills = [
   {
     title: "Java",
     icon: "/java.svg",
-    appear: [0.45, 0.5, 0.76],
+    appear: [0.45, 0.54, 0.76],
     x: "50%",
     y: "64%",
     link: "https://www.java.com/en/",
@@ -458,7 +458,7 @@ export const workExperience = [
   {
     id: 4,
     title: "Application Manager, Lead Frontend Developer at Consumrz.com",
-    desc: "Developed and maintained user-facing features using modern frontend technologies.",
+    desc: "Developing and maintaining user-facing features using modern frontend technologies.",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
   },

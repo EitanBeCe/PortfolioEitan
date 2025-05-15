@@ -30,6 +30,12 @@ export function AnimatedLines() {
   const pathLengthFourth = useTransform(scrollYProgress, [0, 0.8], [0.05, 1.2]);
   const pathLengthFifth = useTransform(scrollYProgress, [0, 0.8], [0, 1.2]);
 
+  const textOpacity = useTransform(
+    scrollYProgress,
+    [0.1, 0.4, 0.7, 0.76],
+    [0, 1, 1, 0]
+  );
+
   const opacities = [
     useTransform(scrollYProgress, mySkills[0].appear, [0, 1, 0]),
     useTransform(scrollYProgress, mySkills[1].appear, [0, 1, 0]),
@@ -72,9 +78,25 @@ export function AnimatedLines() {
         ]}
       />
 
-      {/* <AnimatedSkills /> */}
       {!isMobile && (
         <div className="sticky top-0 h-screen w-full">
+          <motion.div
+            style={{
+              opacity: textOpacity,
+            }}
+          >
+            <LazyAnimated rootMargin="0px 0px -40% 0px">
+              <TextRevealCard
+                // text="To what you've missed"
+                // revealText="Projects worth seeing"
+                text="At the important things"
+                revealText="That actually matter"
+                className="mx-auto translate-x-[8vw] sm:translate-x-[8vw] w-[60vw] sm:w-[50vw] top-[66vh]"
+              />
+            </LazyAnimated>
+          </motion.div>
+
+          {/* <AnimatedSkills /> */}
           {mySkills.map((skill, index) => (
             <motion.div
               key={index}
@@ -87,7 +109,7 @@ export function AnimatedLines() {
                 borderRadius: "50%",
               }}
               whileHover={{
-                filter: "brightness(2)",
+                filter: "brightness(1.4)",
                 // boxShadow: "0px 0px 25px 8px rgba(138, 43, 226, 0.8)",
               }}
               transition={{ duration: 0.3 }}
@@ -266,7 +288,7 @@ const GoogleGeminiEffect = ({
           </filter>
         </defs>
       </svg>
-      {!isMobile && (
+      {/* {!isMobile && (
         <LazyAnimated rootMargin="0px 0px -40% 0px">
           <TextRevealCard
             // text="To what you've missed"
@@ -278,8 +300,8 @@ const GoogleGeminiEffect = ({
             className="mx-auto translate-x-[8vw] sm:translate-x-[8vw] w-[60vw] sm:w-[50vw] top-[20vh] sm:top-[40vh]"
           />
         </LazyAnimated>
-      )}
-      {isMobile && <div className="h-52" />}
+      )} */}
+      <div className="h-52" />
     </div>
   );
 };
