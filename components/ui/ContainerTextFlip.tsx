@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect, useId } from "react";
-
 import { motion } from "motion/react";
 import { cn } from "../../lib/utils.tsx";
 
@@ -28,7 +27,11 @@ export function ContainerTextFlip({
   const id = useId();
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [width, setWidth] = useState(100);
+  const [isExploding, setIsExploding] = useState(false);
   const textRef = React.useRef(null);
+
+  const isShakingPhase = currentWordIndex >= words.length - 3;
+  const isLastWord = currentWordIndex === words.length - 1;
 
   const updateWidthForWord = () => {
     if (textRef.current) {
@@ -36,6 +39,8 @@ export function ContainerTextFlip({
       // @ts-ignore
       const textWidth = textRef.current.scrollWidth + 30;
       setWidth(textWidth);
+      // const textWidth = (textRef.current as HTMLElement).scrollWidth + 30;
+      // setWidth(textWidth);
     }
   };
 
@@ -45,20 +50,39 @@ export function ContainerTextFlip({
   }, [currentWordIndex]);
 
   useEffect(() => {
+    if (isLastWord) {
+      setTimeout(() => setIsExploding(true), interval * 0.8);
+    }
+
     const intervalId = setInterval(() => {
-      setCurrentWordIndex((prevIndex) => (prevIndex + 1) % words.length);
+      setCurrentWordIndex((prev) =>
+        prev + 1 < words.length ? prev + 1 : prev
+      );
       // Width will be updated in the effect that depends on currentWordIndex
     }, interval);
 
     return () => clearInterval(intervalId);
-  }, [words, interval]);
+  }, [words, interval, isLastWord]);
 
   return (
     <motion.div
       layout
       layoutId={`words-here-${id}`}
-      animate={{ width }}
-      transition={{ duration: animationDuration / 2000 }}
+      // style={{ minWidth: width }}
+      animate={{
+        width,
+        scale: isExploding ? 2 : isShakingPhase ? [1, 1.05, 0.98, 1.07, 1] : 1,
+        rotate: isShakingPhase && !isExploding ? [0, -2, 2, -1, 1, 0] : 0,
+        // rotate: isShakingPhase && !isExploding ? [0, -4, 4, -5, 5, 0] : 0,
+        opacity: isExploding ? 0 : 1,
+      }}
+      transition={{
+        duration: isExploding ? 0.5 : 0.6,
+        // duration: animationDuration / 2000,
+        // ease: "easeInOut",
+        repeat: isShakingPhase && !isExploding ? Infinity : 0,
+        repeatType: "loop",
+      }}
       className={cn(
         "relative inline-block rounded-lg pt-2 pb-3 text-center text-4xl font-bold text-black md:text-7xl dark:text-white",
         "[background:linear-gradient(to_bottom,#f3f4f6,#e5e7eb)]",
@@ -74,7 +98,7 @@ export function ContainerTextFlip({
           duration: animationDuration / 1000,
           ease: "easeInOut",
         }}
-        className={cn("inline-block", textClassName)}
+        className={cn("inline-block whitespace-nowrap", textClassName)}
         ref={textRef}
         layoutId={`word-div-${words[currentWordIndex]}-${id}`}
       >
@@ -82,17 +106,9 @@ export function ContainerTextFlip({
           {words[currentWordIndex].split("").map((letter, index) => (
             <motion.span
               key={index}
-              initial={{
-                opacity: 0,
-                filter: "blur(10px)",
-              }}
-              animate={{
-                opacity: 1,
-                filter: "blur(0px)",
-              }}
-              transition={{
-                delay: index * 0.02,
-              }}
+              initial={{ opacity: 0, filter: "blur(10px)" }}
+              animate={{ opacity: 1, filter: "blur(0px)" }}
+              transition={{ delay: index * 0.02 }}
             >
               {letter}
             </motion.span>
