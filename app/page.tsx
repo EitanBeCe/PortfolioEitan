@@ -18,7 +18,6 @@ export default function Home() {
   return (
     <main className="relative bg-black-100 flex justify-center items-center flex-col mx-auto">
       <div className="max-w-7xl w-full">
-        {/* // FIXME: ридми пример тут https://github.com/sugith10 - добавить консюмрз туда. Портфолио. Циферки опыта. Ссыль резюме */}
         {/* // FIXME: ссыль на резюме */}
 
         <FloatingNav navItems={navItems} />
