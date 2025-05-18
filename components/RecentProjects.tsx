@@ -81,15 +81,16 @@ const RecentProjects = () => {
 
                     <div className="flex justify-center items-center">
                       {githubLink && (
-                        <a
-                          href={githubLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
+                        <div
+                          onClick={() =>
+                            githubLink && window.open(githubLink, "_blank")
+                          }
+                          style={{ cursor: githubLink ? "pointer" : "default" }}
                         >
                           <div className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center mr-6">
                             <img src="/git.svg" alt="git" className="p-2" />
                           </div>
-                        </a>
+                        </div>
                       )}
 
                       <p className="flex lg:text-xl md:text-xs text-sm text-purple">

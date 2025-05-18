@@ -19,12 +19,17 @@ export const HeroTexts = () => {
         >
           <TextGenerateEffect
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
-            words="Transforming Concepts into Seamless User Experiences"
+            words="Creating what Your Users Actually Want to Use"
+            // words="Meet your Next Frontend Developer"
+            // words="Crafting Interfaces That Just Feel Right"
+            // words="Transforming Concepts into Seamless User Experiences"
+            // words="Your Next Frontend Should Feel Effortless — I Make It Happen"
           />
         </motion.div>
 
-        <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-          Hi, I&apos;m Eitan, a React Frontend developer based in Israel
+        <p className="text-center md:tracking-wider mb-4 mt-1 text-sm md:text-lg lg:text-2xl">
+          {/* Hi, I&apos;m Eitan, a React Frontend developer based in Israel */}
+          I&apos;m Eitan — a React frontend developer based in Israel.
         </p>
 
         <a href="#about">

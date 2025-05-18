@@ -35,7 +35,7 @@ const TextFlip = () => {
   }, [totalDuration]);
 
   return (
-    <div className="flex flex-col justify-center items-center my-44">
+    <div className="flex flex-col justify-center items-center my-44 max-sm:scale-75 max-sm:mx-auto">
       <AnimatePresence>
         {showInitial && (
           <motion.div
