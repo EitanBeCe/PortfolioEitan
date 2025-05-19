@@ -5,16 +5,27 @@ import { AnimatePresence, motion } from "motion/react";
 import { cn } from "../../lib/utils.tsx";
 
 const TextFlip = () => {
+  const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+  const words = !isSafari
+    ? [
+        "passionate 🤢",
+        "driven 😵‍💫",
+        "creative 🫥",
+        "coffee-dependent ☕️",
+        "fluff-generating 🤦",
+        "AI prompt recycler ♻️",
+        // "Chief AI prompt recycler",
+      ]
+    : [
+        "passionate",
+        "driven",
+        "creative",
+        "coffee-dependent",
+        "fluff-generating",
+        "AI prompt recycler",
+      ];
+
   const interval = 1200;
-  const words = [
-    "passionate 🤢",
-    "driven 😵‍💫",
-    "creative 🫥",
-    "coffee-dependent ☕️",
-    "fluff-generating 🤦",
-    "AI prompt recycler ♻️",
-    // "Chief AI prompt recycler",
-  ];
   const totalDuration = words.length * interval - 200;
   const fadeOutDuration = 600;
 
