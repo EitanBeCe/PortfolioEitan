@@ -1,7 +1,7 @@
 <div align="center">
   <br />
     <a href="" target="_blank">
-      <img src="https://eitanportfolio.netlify.app/portfolio.png" alt="Project Banner">
+      <img src="https://eitanportfolio.netlify.app/portfolioScreenshot.png" alt="Project Banner">
     </a>
   <br />
 
