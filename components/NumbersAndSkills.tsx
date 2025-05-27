@@ -3,10 +3,9 @@
 import React, { useEffect, useState } from "react";
 import { myNumbers } from "../data/index.tsx";
 import { LazyAnimated } from "./LazyLoad.tsx";
-import SkillsSection from "./SkillsSection.tsx";
 import { motion, useScroll, useTransform } from "motion/react";
 
-const NumbersAndSkills = () => {
+const MyNumbers = () => {
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -50,7 +49,7 @@ const NumbersAndSkills = () => {
           ))}
         </div>
 
-        {isMobile && <SkillsSection />}
+        {/* {isMobile && <SkillsSection />} */}
       </LazyAnimated>
     </motion.div>
   );
@@ -73,4 +72,4 @@ const NumbersItem = ({ item }: { item: { title: string; number: string } }) => {
   );
 };
 
-export default NumbersAndSkills;
+export default MyNumbers;

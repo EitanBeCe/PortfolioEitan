@@ -78,8 +78,8 @@ export function AnimatedLines() {
         ]}
       />
 
-      {!isMobile && (
-        <div className="sticky top-0 h-screen w-full">
+      <div className="sticky top-0 h-screen w-full">
+        {!isMobile && (
           <motion.div
             style={{
               opacity: textOpacity,
@@ -95,35 +95,35 @@ export function AnimatedLines() {
               />
             </LazyAnimated>
           </motion.div>
+        )}
 
-          {/* <AnimatedSkills /> */}
-          {mySkills.map((skill, index) => (
-            <motion.div
-              key={index}
-              style={{
-                position: "absolute",
-                top: skill.y,
-                left: skill.x,
-                opacity: opacities[index],
-                scale: scales[index],
-                borderRadius: "50%",
-              }}
-              whileHover={{
-                filter: "brightness(1.4)",
-                // boxShadow: "0px 0px 25px 8px rgba(138, 43, 226, 0.8)",
-              }}
-              transition={{ duration: 0.3 }}
-            >
-              <ButtonPurple
-                icon={skill.icon}
-                text={skill.title}
-                link={skill.link}
-                // isFixedSize={true}
-              />
-            </motion.div>
-          ))}
-        </div>
-      )}
+        {/* <AnimatedSkills /> */}
+        {mySkills.map((skill, index) => (
+          <motion.div
+            key={index}
+            style={{
+              position: "absolute",
+              top: isMobile ? skill.y_sm : skill.y,
+              left: isMobile ? skill.x_sm : skill.x,
+              opacity: opacities[index],
+              scale: isMobile ? 1 : scales[index],
+              borderRadius: "50%",
+            }}
+            whileHover={{
+              filter: "brightness(1.4)",
+              // boxShadow: "0px 0px 25px 8px rgba(138, 43, 226, 0.8)",
+            }}
+            transition={{ duration: 0.3 }}
+          >
+            <ButtonPurple
+              icon={skill.icon}
+              text={skill.title}
+              link={skill.link}
+              // isFixedSize={true}
+            />
+          </motion.div>
+        ))}
+      </div>
     </div>
   );
 }

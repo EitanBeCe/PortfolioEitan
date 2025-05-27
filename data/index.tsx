@@ -254,6 +254,8 @@ export const mySkills = [
     appear: [0.07, 0.46, 0.76],
     x: "6%",
     y: "18%",
+    x_sm: "2%",
+    y_sm: "8%",
     link: "https://react.dev/",
   },
   {
@@ -262,6 +264,8 @@ export const mySkills = [
     appear: [0.1, 0.47, 0.76],
     x: "60%",
     y: "30%",
+    x_sm: "32%",
+    y_sm: "46%",
     link: "https://nextjs.org/",
   },
   {
@@ -270,6 +274,8 @@ export const mySkills = [
     appear: [0.15, 0.48, 0.76],
     x: "42%",
     y: "38%",
+    x_sm: "54%",
+    y_sm: "20%",
     link: "https://www.typescriptlang.org/",
   },
   {
@@ -278,6 +284,8 @@ export const mySkills = [
     appear: [0.2, 0.49, 0.76],
     x: "26%",
     y: "30%",
+    x_sm: "10%",
+    y_sm: "18%",
     link: "https://www.typescriptlang.org/",
   },
   {
@@ -286,6 +294,8 @@ export const mySkills = [
     appear: [0.25, 0.5, 0.76],
     x: "10%",
     y: "80%",
+    x_sm: "0%",
+    y_sm: "80%",
     link: "https://tailwindcss.com/",
   },
   {
@@ -294,6 +304,8 @@ export const mySkills = [
     appear: [0.3, 0.51, 0.76],
     x: "74%",
     y: "14%",
+    x_sm: "58%",
+    y_sm: "6%",
     link: "https://threejs.org/",
   },
   {
@@ -302,6 +314,8 @@ export const mySkills = [
     appear: [0.35, 0.52, 0.76],
     x: "26%",
     y: "66%",
+    x_sm: "22%",
+    y_sm: "68%",
     link: "https://gsap.com",
   },
   {
@@ -310,6 +324,8 @@ export const mySkills = [
     appear: [0.4, 0.53, 0.76],
     x: "72%",
     y: "84%",
+    x_sm: "58%",
+    y_sm: "82%",
     link: "https://developer.apple.com/xcode/swiftui/",
   },
   {
@@ -318,6 +334,8 @@ export const mySkills = [
     appear: [0.45, 0.54, 0.76],
     x: "50%",
     y: "64%",
+    x_sm: "56%",
+    y_sm: "72%",
     link: "https://www.java.com/en/",
   },
   {
@@ -325,6 +343,8 @@ export const mySkills = [
     appear: [0.5, 0.55, 0.76],
     x: "40%",
     y: "90%",
+    x_sm: "40%",
+    y_sm: "90%",
   },
 ];
 

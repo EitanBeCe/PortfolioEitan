@@ -56,13 +56,13 @@ const TextFlip = () => {
             transition={{ duration: fadeOutDuration / 1000 }}
             className="flex flex-col items-center"
           >
-            <h1 className="heading pr-6 pb-6">
+            <h1 className="heading pr-6 pb-6 text-nowrap">
               <span className="text-purple">Warning:</span> I am not a
             </h1>
             <ContainerTextFlip
               words={words}
               interval={interval}
-              className="max-h-[92px]"
+              className="max-h-[92px] overflow-hidden"
             />
           </motion.div>
         )}

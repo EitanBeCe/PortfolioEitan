@@ -11,8 +11,8 @@ import Footer from "../components/Footer.tsx";
 import { MacbookScreen } from "../components/MacbookScreen.tsx";
 import MyPhoto from "../components/MyPhoto.tsx";
 import { LampFooter } from "../components/ui/Lamp.tsx";
-import NumbersAndSkills from "../components/NumbersAndSkills.tsx";
 import TextFlipAnimated from "../components/TextFlipAnimated.tsx";
+import MyNumbers from "../components/NumbersAndSkills.tsx";
 
 export default function Home() {
   return (
@@ -23,7 +23,7 @@ export default function Home() {
         <FloatingNav navItems={navItems} />
         {/* <Hero /> */}
         <Hero_v2 />
-        <NumbersAndSkills />
+        <MyNumbers />
         <AnimatedLines />
         <MyPhoto />
         <TextFlipAnimated />
