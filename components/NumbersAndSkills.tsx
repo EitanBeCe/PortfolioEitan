@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { myNumbers } from "../data/index.tsx";
 import { LazyAnimated } from "./LazyLoad.tsx";
 import { motion, useScroll, useTransform } from "motion/react";
@@ -19,13 +19,13 @@ const MyNumbers = () => {
   const scale = useTransform(scrollYProgress, [0, 0.4], [1, 0.8]);
   const y = useTransform(scrollYProgress, [0, 0.4], [0, 140]);
 
-  const [isMobile, setIsMobile] = useState(false);
+  // const [isMobile, setIsMobile] = useState(false);
 
-  useEffect(() => {
-    if (window && window.innerWidth < 768) {
-      setIsMobile(true);
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (window && window.innerWidth < 768) {
+  //     setIsMobile(true);
+  //   }
+  // }, []);
 
   return (
     <motion.div
