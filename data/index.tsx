@@ -155,7 +155,7 @@ export const myNumbers = [
     title: "Spoken\nLanguages",
   },
   {
-    number: "2000+",
+    number: "3000+",
     title: "Commits\non Gitlab",
   },
   {
@@ -163,7 +163,7 @@ export const myNumbers = [
     title: "Commits\non Github",
   },
   {
-    number: "3000+",
+    number: "5000+",
     title: "Happy Clients\non Consumrz.com",
   },
 ];
